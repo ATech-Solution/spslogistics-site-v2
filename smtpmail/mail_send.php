@@ -1,5 +1,4 @@
 <?php
-echo "file accessed";
         //SMTP needs accurate times, and the PHP time zone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have   access to that
         date_default_timezone_set('Etc/UTC');
@@ -19,14 +18,15 @@ echo "file accessed";
             try {
                 //Server settings
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
-                $mail->isSMTP();   //Send using SMTP
+                $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'ssl://email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
                 $mail->SMTPAuth   = true;  //Enable SMTP authentication
                 $mail->Username   = 'AKIAUQUCCF6GSJDVC3L5'; //SMTP username
                 $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
-                $mail->Port       = 443;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
+                $mail->SMTPSecure = "tls";
+                $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
                 $mail->setFrom('info@spslogistics.io', 'Info SPS');
