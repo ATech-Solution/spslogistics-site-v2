@@ -111,7 +111,7 @@
 
                         //Recipients
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, $from);
+                        $mail->addAddress($email, $email);
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
                         $mail->Body    = $messages;
@@ -119,13 +119,13 @@
                         $mail->send();
 
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, $from);     //email tujuan
+                        $mail->addAddress($email, $email);     //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
                         $mail->Body    = $message2;
                         $mail->AltBody = $message2;
                         $mail->send();
-                        header('Location: ./index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
+                        header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
                         // echo 'Message has been sent';
                     }   
 
