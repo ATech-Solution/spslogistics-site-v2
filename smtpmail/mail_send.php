@@ -31,23 +31,18 @@
 
 
                 if(isset($_POST['formtype'])=="signup"){  
-                    echo "signup";  
-                    $to = "info@spslogistics.io"; // this is your Email address
-                    $from = $_POST['email']; // this is the sender's Email address
-                    // $first_name = $_POST['first_name'];
-                    // $last_name = $_POST['last_name'];
-                    $subject = "Form Sign Up Spslogistics.io";
-                    $subject2 = "Copy of Your Form Sign Up Spslogistics.io";
-                    // $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-                    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-                    $message = "New Sign Up user";
-                    $message2 = "Thank you for your sign up.";
-                    $headers = "From:" . $from;
-                    $headers2 = "From:" . $to;
-                    // mail($to,$subject,$message,$headers);
-                    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-                    // echo "Mail Sent. Thank you " . $from . ", we will contact you shortly.";
-                    
+                    // $to = "info@spslogistics.io"; // this is your Email address
+                    // $from = $_POST['email']; // this is the sender's Email address
+                    // // $first_name = $_POST['first_name'];
+                    // // $last_name = $_POST['last_name'];
+                    // $subject = "Form Sign Up Spslogistics.io";
+                    // $subject2 = "Copy of Your Form Sign Up Spslogistics.io";
+                    // // $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+                    // // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+                    // $message = "New Sign Up user";
+                    // $message2 = "Thank you for your sign up.";
+                    // $headers = "From:" . $from;
+                    // $headers2 = "From:" . $to;
                     // // mail1
                     // //Recipients
                     // $mail->setFrom($from, $from);
@@ -76,7 +71,7 @@
                     // $mail2->AltBody = $message2;
                     // $mail2->send();
 
-                    
+
                     //Recipients
                     $mail->setFrom('info@spslogistics.io', 'Info SPS');
                     $mail->addAddress('tan@atech.software', 'tan@atech.software');     //email tujuan
@@ -95,8 +90,8 @@
                     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                     $mail->send();
-                    echo 'Message has been sent';
-                    echo 'Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.';
+                    echo 'Sign p message has been sent';
+                    // echo 'Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.';
                     // header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                 }   
 
