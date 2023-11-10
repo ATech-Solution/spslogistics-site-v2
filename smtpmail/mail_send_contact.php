@@ -42,29 +42,29 @@
                         $interest ="";
                         $message ="";
                         $interests = "";
-                        if (isset($_POST['your-name'])) {
+                        // if (isset($_POST['your-name'])) {
                             $name = $_POST['your-name'];
-                        } 
-                        if (isset($_POST['your-email'])) {
+                        // } 
+                        // if (isset($_POST['your-email'])) {
                             $email = $_POST['your-email'];
-                        } 
-                        if (isset($_POST['your-number'])) {
+                        // } 
+                        // if (isset($_POST['your-number'])) {
                             $number = $_POST['your-number'];
-                        } 
-                        if (isset($_POST['your-company'])) {
+                        // } 
+                        // if (isset($_POST['your-company'])) {
                             $company = $_POST['your-company'];
-                        } 
-                        if (isset($_POST['interested'])) {
+                        // } 
+                        // if (isset($_POST['interested'])) {
                             $interest = $_POST['interested'];
                             if (isset($_POST['interested'])) {
                                 foreach ($interest as $interested){ 
                                     $interests .= $interested .",";
                                 }
                             }
-                        }
-                        if (isset($_POST['your-message'])) {
+                        // }
+                        // if (isset($_POST['your-message'])) {
                             $message = $_POST['your-message'];
-                        }
+                        // }
                         $messages = "Name : ". $name . "<br>Email : ". $email . "<br>Phone Number : ". $number . "<br>Company : ". $company . "<br>Interest : ". $interests . "<br>message ". $message;
                         $message2 = "Thank you for your contact, we will contact you shortly.";
                         // $headers = "From:" . $from;
