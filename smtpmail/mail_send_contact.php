@@ -44,20 +44,25 @@
                         $interests = "";
                         if (isset($_POST['your-name'])) {
                             $name = $_POST['your-name'];
-                        }else if (isset($_POST['your-email'])) {
+                        } 
+                        if (isset($_POST['your-email'])) {
                             $email = $_POST['your-email'];
-                        }else if (isset($_POST['your-number'])) {
+                        } 
+                        if (isset($_POST['your-number'])) {
                             $number = $_POST['your-number'];
-                        }else if (isset($_POST['your-company'])) {
+                        } 
+                        if (isset($_POST['your-company'])) {
                             $company = $_POST['your-company'];
-                        }else if (isset($_POST['interested'])) {
+                        } 
+                        if (isset($_POST['interested'])) {
                             $interest = $_POST['interested'];
                             if (isset($_POST['interested'])) {
                                 foreach ($interest as $interested){ 
                                     $interests .= $interested .",";
                                 }
                             }
-                        }else if (isset($_POST['your-name'])) {
+                        }
+                        if (isset($_POST['your-message'])) {
                             $message = $_POST['your-message'];
                         }
                         $messages = "Name : ". $name . "<br>Email : ". $email . "<br>Phone Number : ". $number . "<br>Company : ". $company . "<br>Interest : ". $interests . "<br>message ". $message;
