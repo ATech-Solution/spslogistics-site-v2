@@ -29,8 +29,7 @@
                 $mail->SMTPSecure = "tls";
                 $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-
-                if(isset($_POST['formtype'])=="signup"){  
+                // if(isset($_POST['formtype'])=="signup"){  
                     // $to = "info@spslogistics.io"; // this is your Email address
                     // $from = $_POST['email']; // this is the sender's Email address
                     // // $first_name = $_POST['first_name'];
@@ -93,7 +92,7 @@
                     echo 'Sign p message has been sent';
                     // echo 'Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.';
                     // header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
-                }   
+                // }   
 
 
             } catch (Exception $e) {
