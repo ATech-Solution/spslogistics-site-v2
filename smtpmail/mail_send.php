@@ -64,18 +64,18 @@
                 $mail->AltBody = $message;
                 $mail->send();
 
-                // $mail2->setFrom($from, $from);
-                // $mail2->addAddress('tan@atech.software', 'Info SPS');     //email tujuan
-                // $mail2->isHTML(true);   //Set email format to HTML
-                // $mail2->Subject = $subject2;
-                // $mail2->Body    = $message2;
-                // $mail2->AltBody = $message2;
-                // $mail2->send();
-                header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
+                $mail2->setFrom($from, $from);
+                $mail2->addAddress('tan@atech.software', 'Info SPS');     //email tujuan
+                $mail2->isHTML(true);   //Set email format to HTML
+                $mail2->Subject = $subject2;
+                $mail2->Body    = $message2;
+                $mail2->AltBody = $message2;
+                $mail2->send();
+                // header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                 
                 // echo 'Message has been sent';
             } catch (Exception $e) {
-                header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+                // header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
