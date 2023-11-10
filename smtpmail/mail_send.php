@@ -67,7 +67,7 @@
 
                         //Recipients
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, $from);
+                        $mail->addAddress($from, "Your email");     //email tujuan
                         $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
@@ -76,7 +76,7 @@
                         $mail->send();
 
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, $from);     //email tujuan
+                        $mail->addAddress($from, "Your email");     //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
                         $mail->Body    = $message2;
@@ -131,7 +131,6 @@
                     $mail->AltBody = $message2;
                     $mail->send();
                     header('Location: ../../index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
-
                 } 
             // } catch (Exception $e) {
             //     header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
