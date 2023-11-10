@@ -17,7 +17,8 @@
 
             try {
                 //Server settings
-                $mail->SMTPDebug = 1;  //Enable verbose debug output
+                // $mail->SMTPDebug = 3;  //Enable verbose debug output
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
@@ -74,7 +75,8 @@
                     header('Location: ../../index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                     // echo 'Message has been sent';
 
-                } else if(isset($_POST['formtype'])=="contact"){
+                } 
+                if(isset($_POST['formtype'])=="contact"){
                         $to = "info@spslogistics.io"; // this is your Email address
                         $from = $_POST['your-email']; // this is the sender's Email address
                         $subject = "Form Contact Spslogistics.io";
@@ -134,10 +136,3 @@
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
-<!-- username : AKIAUQUCCF6GSJDVC3L5
-password : BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx
-SMTP endpoint : email-smtp.ap-southeast-1.amazonaws.com
-startTLS Port : 25, 587 or 2587
-TLS Wrapper Port : 465 or 2465
-TLS : true
-sender email: info@spslogistics.io -->
