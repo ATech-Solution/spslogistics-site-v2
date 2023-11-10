@@ -42,37 +42,26 @@
                         $interest ="";
                         $message ="";
                         $interests = "";
-                        // if (isset($_POST['your-name'])) {
-                            $name = $_POST['your-name'];
-                        // } 
-                        // if (isset($_POST['your-email'])) {
-                            $email = $_POST['your-email'];
-                        // } 
-                        // if (isset($_POST['your-number'])) {
-                            $number = $_POST['your-number'];
-                        // } 
-                        // if (isset($_POST['your-company'])) {
-                            $company = $_POST['your-company'];
-                        // } 
-                        // if (isset($_POST['interested'])) {
-                            $interest = $_POST['interested'];
-                            if (isset($_POST['interested'])) {
-                                foreach ($interest as $interested){ 
-                                    $interests .= $interested .",";
-                                }
+                        $name = $_POST['your-name'];
+                        $email = $_POST['your-email'];
+                        $number = $_POST['your-number'];
+                        $company = $_POST['your-company'];
+                        $interest = $_POST['interested'];
+                        if (isset($_POST['interested'])) {
+                            foreach ($interest as $interested){ 
+                                $interests .= $interested .",";
                             }
-                        // }
-                        // if (isset($_POST['your-message'])) {
-                            $message = $_POST['your-message'];
-                        // }
-                        $messages = "Name : ". $name . "<br>Email : ". $email . "<br>Phone Number : ". $number . "<br>Company : ". $company . "<br>Interest : ". $interests . "<br>message ". $message;
+                        }
+                        $message = $_POST['your-message'];
+                        
+                        $messages = "Name : ". $name . "<br><br>Email : ". $email . "<br><br>Phone Number : ". $number . "<br><br>Company : ". $company . "<br><br>Interest : ". $interests . "<br><br>Message : ". $message;
                         $message2 = "Thank you for your contact, we will contact you shortly.";
                         // $headers = "From:" . $from;
                         // $headers2 = "From:" . $to;
 
                         //Recipients
-                        $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, "Your email");     //email tujuan
+                        $mail->setFrom($to, $to);
+                        $mail->addAddress($to, $to);     //email tujuan
                         $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
@@ -80,8 +69,8 @@
                         $mail->AltBody = $messages;
                         $mail->send();
 
-                        $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($from, "Your email");     //email tujuan
+                        $mail->setFrom($to, $to);
+                        $mail->addAddress($from, $from);     //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
                         $mail->Body    = $message2;
