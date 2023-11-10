@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['submit'])){
+    // if(isset($_POST['submit'])){
         //SMTP needs accurate times, and the PHP time zone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have   access to that
         date_default_timezone_set('Etc/UTC');
@@ -27,7 +27,7 @@
                 $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
                 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
                 $mail->SMTPSecure = "tls";
-                $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS`
 
                 // if(isset($_POST['formtype'])=="signup"){  
                     // $to = "info@spslogistics.io"; // this is your Email address
@@ -99,7 +99,7 @@
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                 // header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo);
             }
-    }        
+    // }        
 ?>
 <!-- username : AKIAUQUCCF6GSJDVC3L5
 password : BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx
