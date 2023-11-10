@@ -20,13 +20,13 @@
                 //Server settings
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
                 $mail->isSMTP();   //Send using SMTP
-                $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
+                $mail->Host       = 'ssl://email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
                 $mail->SMTPAuth   = true;  //Enable SMTP authentication
                 $mail->Username   = 'AKIAUQUCCF6GSJDVC3L5'; //SMTP username
                 $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
-                $mail->Port       = 465;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port       = 443;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
                 $mail->setFrom('info@spslogistics.io', 'Info SPS');
