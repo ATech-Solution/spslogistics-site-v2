@@ -53,7 +53,7 @@
                     //Recipients
                     $mail->setFrom('info@spslogistics.io', 'Info SPS');
                     $mail->addAddress($from, "SPS email");     //email tujuan
-                    // $mail->addReplyTo('tan@atech.software', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
+                    $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('tan@atech.software'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addBCC('tan@atech.software'); // email bcc (bila tidak dibutuhkan bisa diberi pagar)
                     //Attachments
