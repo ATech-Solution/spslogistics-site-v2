@@ -64,25 +64,25 @@
 		<nav id="primary-menu" class="navbar navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
 				
-				<a class="logo" href="index.html">
+				<a class="logo" href="index.php">
 					<img class="logo-dark" src="assets/img/logo-sps.png" alt="Spslogistics Logo">
 					<img class="logo-light" src="assets/img/logo-sps.png" alt="Spslogistics Logo">
 				</a>
 				</div>
 				<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
 					<ul class="nav navbar-nav nav-pos-right navbar-right nav-split">
-						<li class="active"><a data-scroll="scrollTo" href="#slider">Home</a></li>
-						<li><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
-						<li><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
-						<li><a data-scroll="scrollTo" href="#about">About us</a>
-						<li><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
+						<li class="active slider-active"><a data-scroll="scrollTo" href="#slider">Home</a></li>
+						<li class="active how-sps-works-active"><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
+						<li class="active pricing-active"><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
+						<li class="active about-active"><a data-scroll="scrollTo" href="#about">About us</a>
+						<li class="active footer-active"><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -394,12 +394,13 @@
 					</div>
 					<!-- .row end -->
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s">
+						<div class="col-xs-12 col-sm-12 col-md-12"><!-- mail_handler.php -->
+							<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
 								<!-- Email:  --><input class="mb-20" type="email" name="email" placeholder="Enter your email address here" required>
 								<!-- Message:<br><textarea rows="5" name="message" cols="30"></textarea> -->
+								<input type="hidden" name="formtype" value="signup">
 								<input class="button" type="submit" name="submit" value="Submit">
 							</form>
 						</div>
@@ -583,8 +584,8 @@
 							<h2 class="heading--title yellow-light-heading-footer mb-60">Connect with our expert</h2>
 						</div>
 						<div class="form-request">
-							<div class="row">
-								<form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+							<div class="row"><!-- mail_handler_contact.php -->
+								<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
 										<input type="text" class="form-control" name="your-name" placeholder="Your Name" required>
@@ -633,6 +634,7 @@
 									</div>
 									<!-- .col-md-12 end -->
 									<div class="col-xs-12 col-sm-12 col-md-6">
+										<input type="hidden" name="formtype" value="contact">
 										<input class="button" name="submit" type="submit" value="Submit">
 									</div>
 									<!-- .col-md-6 end -->

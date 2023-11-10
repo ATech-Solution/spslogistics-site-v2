@@ -73,18 +73,18 @@
 				<span class="icon-bar"></span>
 				</button>
 				
-				<a class="logo" href="index.html">
+				<a class="logo" href="index.php">
 					<img class="logo-dark" src="assets/img/logo-sps.png" alt="Spslogistics Logo">
 					<img class="logo-light" src="assets/img/logo-sps.png" alt="Spslogistics Logo">
 				</a>
 				</div>
 				<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
 					<ul class="nav navbar-nav nav-pos-right navbar-right nav-split">
-						<li class="active"><a data-scroll="scrollTo" href="#slider">Home</a></li>
-						<li><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
-						<li><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
-						<li><a data-scroll="scrollTo" href="#about">About us</a>
-						<li><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
+						<li><a data-scroll="scrollTo" href="index.php#slider">Home</a></li>
+						<li><a data-scroll="scrollTo" href="index.php#how-sps-works">How SPS works</a></li>
+						<li><a data-scroll="scrollTo" href="index.php#pricing">Pricing</a></li>
+						<li><a data-scroll="scrollTo" href="index.php#about">About us</a>
+						<li><a data-scroll="scrollTo" href="index.php#footer">Contact us</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

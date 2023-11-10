@@ -10,6 +10,14 @@
 	7.  WOW
 	8.  Youtube Background
 */
+
+$(window).load(function() {
+    var idhash = decodeURI(location.hash.split('#')[1]);
+    $(".navbar-nav > li.active").removeClass('active');
+    $(".navbar-nav > li."+idhash+"-active").addClass('active');
+    console.log("hash:"+idhash);
+});
+
 (function($) {
     "use strict";
 
@@ -33,8 +41,39 @@
         }
     });
 
+    /* ------------------  ACTIVE MENU ------------------ */
+    // $(window).ready(() => {
+        $('.navbar-nav').on('click', 'li', function() {
+            $(".navbar-nav > li.active").removeClass('active');
+            $(this).addClass('active');
+        });
+        
 
+    // });
     
+    /* ------------------  SCROLL TO ------------------ */
+
+    // // $(document).ready(function() {
+    //   var hash = window.location.hash;
+    //   var link = $('a');
+    //   $('a').click(function(e) {
+    //     e.preventDefault();
+    //     hash = link.attr("href");
+    //     window.location = hash;
+    //   });
+    // // });
+
+
+    var aScroll = $('a[data-scroll="scrollTo"]');
+    aScroll.on('click', function(event) {
+        var target = $($(this).attr('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top-100
+            }, 1000);
+        }
+    });
 
     /* ------------------  AJAX MAILCHIMP ------------------ */
 
@@ -95,18 +134,6 @@
         });
     });
 
-    /* ------------------  SCROLL TO ------------------ */
-
-    var aScroll = $('a[data-scroll="scrollTo"]');
-    aScroll.on('click', function(event) {
-        var target = $($(this).attr('href'));
-        if (target.length) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top-100
-            }, 1000);
-        }
-    });
 
     /* ------------------  WOW Animated ------------------ */
     var wow = new WOW({

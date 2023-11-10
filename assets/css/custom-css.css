@@ -248,7 +248,8 @@ p{color: #272727!important;opacity: 1!important;}
         border-radius: 10px;
         border: 0;
         padding: 15px;
-        color: #27272778!important;
+        color: #272727!important;
+        opacity: 0.8;
         font-family: 'Lato';
         font-size: 16px;
     }
