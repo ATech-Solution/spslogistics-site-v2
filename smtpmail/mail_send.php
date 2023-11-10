@@ -15,7 +15,7 @@
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
 
-            try {
+            // try {
                 //Server settings
                 // $mail->SMTPDebug = 3;  //Enable verbose debug output
                 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
@@ -130,8 +130,8 @@
                         header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
                     }   
 
-            } catch (Exception $e) {
-                header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
-                // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-            }
+            // } catch (Exception $e) {
+            //     header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+            //     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            // }
 ?>
