@@ -79,10 +79,10 @@
 				<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
 					<ul class="nav navbar-nav nav-pos-right navbar-right nav-split">
 						<li class="active slider-active"><a data-scroll="scrollTo" href="#slider">Home</a></li>
-						<li class="active how-sps-works-active"><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
-						<li class="active pricing-active"><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
-						<li class="active about-active"><a data-scroll="scrollTo" href="#about">About us</a>
-						<li class="active footer-active"><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
+						<li class="how-sps-works-active"><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
+						<li class="pricing-active"><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
+						<li class="about-active"><a data-scroll="scrollTo" href="#about">About us</a>
+						<li class="ooter-active"><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

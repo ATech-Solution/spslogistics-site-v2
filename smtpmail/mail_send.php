@@ -82,17 +82,17 @@
 
                     // mail2
                     //Recipients
-                    $mail2->setFrom($to, $to);
-                    $mail2->addAddress($from, $from);
-                    $mail2->addReplyTo('tan@atech.software', 'Information'); 
-                    $mail2->addCC('tan@atech.software');
-                    $mail2->addBCC('tan@atech.software');
-                    //Content
-                    $mail2->isHTML(true);   //Set email format to HTML
-                    $mail2->Subject = $subject2;
-                    $mail2->Body    = $message2;
-                    $mail2->AltBody = $message2;
-                    $mail2->send();
+                    // $mail2->setFrom($to, $to);
+                    // $mail2->addAddress($from, $from);
+                    // $mail2->addReplyTo('tan@atech.software', 'Information'); 
+                    // $mail2->addCC('tan@atech.software');
+                    // $mail2->addBCC('tan@atech.software');
+                    // //Content
+                    // $mail2->isHTML(true);   //Set email format to HTML
+                    // $mail2->Subject = $subject2;
+                    // $mail2->Body    = $message2;
+                    // $mail2->AltBody = $message2;
+                    // $mail2->send();
                     header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                 }   
 

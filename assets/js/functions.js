@@ -12,10 +12,13 @@
 */
 
 $(window).load(function() {
+    var cur_location = window.location.href;
+    if(cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
     var idhash = decodeURI(location.hash.split('#')[1]);
     $(".navbar-nav > li.active").removeClass('active');
-    $(".navbar-nav > li."+idhash+"-active").addClass('active');
-    console.log("hash:"+idhash);
+        $(".navbar-nav > li."+idhash+"-active").addClass('active');
+        console.log("hash:"+idhash);
+    }
 });
 
 (function($) {
@@ -42,28 +45,12 @@ $(window).load(function() {
     });
 
     /* ------------------  ACTIVE MENU ------------------ */
-    // $(window).ready(() => {
-        $('.navbar-nav').on('click', 'li', function() {
-            $(".navbar-nav > li.active").removeClass('active');
-            $(this).addClass('active');
-        });
-        
-
-    // });
+    $('.navbar-nav').on('click', 'li', function() {
+        $(".navbar-nav > li.active").removeClass('active');
+        $(this).addClass('active');
+    });
     
     /* ------------------  SCROLL TO ------------------ */
-
-    // // $(document).ready(function() {
-    //   var hash = window.location.hash;
-    //   var link = $('a');
-    //   $('a').click(function(e) {
-    //     e.preventDefault();
-    //     hash = link.attr("href");
-    //     window.location = hash;
-    //   });
-    // // });
-
-
     var aScroll = $('a[data-scroll="scrollTo"]');
     aScroll.on('click', function(event) {
         var target = $($(this).attr('href'));
