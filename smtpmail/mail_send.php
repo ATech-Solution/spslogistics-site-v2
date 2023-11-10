@@ -65,10 +65,18 @@
                 $mail->Body    = $message;
                 $mail->AltBody = $message;
 
+                $mail2->isHTML(true);   //Set email format to HTML
+                $mail2->Subject = $subject2;
+                $mail2->Body    = $message2;
+                $mail2->AltBody = $message2;
+                $mail2->send();
+                header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
+
                 $mail->send();
-                echo 'Message has been sent';
+                // echo 'Message has been sent';
             } catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+                // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
 <!-- username : AKIAUQUCCF6GSJDVC3L5
