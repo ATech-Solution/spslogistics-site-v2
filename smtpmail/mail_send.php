@@ -19,7 +19,7 @@
                 //Server settings
                 // $mail->SMTPDebug = 3;  //Enable verbose debug output
                 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
-                $mail->SMTPDebug = 0;  //Enable verbose debug output
+                // $mail->SMTPDebug = 2;  //Enable verbose debug output
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
