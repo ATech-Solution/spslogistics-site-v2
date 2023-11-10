@@ -17,7 +17,7 @@
 
             try {
                 //Server settings
-                $mail->SMTPDebug = 3;  //Enable verbose debug output
+                $mail->SMTPDebug = 1;  //Enable verbose debug output
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
@@ -119,7 +119,7 @@
                         $mail->send();
 
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
-                        $mail->addAddress($email, $email);     //email tujuan
+                        $mail->addAddress($from, $from);     //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
                         $mail->Body    = $message2;
