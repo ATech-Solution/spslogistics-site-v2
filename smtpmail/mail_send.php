@@ -71,11 +71,66 @@
                     $mail->Body    = $message2;
                     $mail->AltBody = $message2;
                     $mail->send();
-                    header('Location: ./index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
+                    header('Location: ../../index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                     // echo 'Message has been sent';
-                }
+
+                } else if(isset($_POST['formtype'])=="contact"){
+                        $to = "info@spslogistics.io"; // this is your Email address
+                        $from = $_POST['your-email']; // this is the sender's Email address
+                        $subject = "Form Contact Spslogistics.io";
+                        $subject2 = "Copy of Your Form Contact Spslogistics.io";
+                        $name ="";
+                        $email ="";
+                        $number ="";
+                        $company ="";
+                        $interest ="";
+                        $message ="";
+                        $interests = "";
+                        if (isset($_POST['your-name'])) {
+                            $name = $_POST['your-name'];
+                        }else if (isset($_POST['your-email'])) {
+                            $email = $_POST['your-email'];
+                        }else if (isset($_POST['your-number'])) {
+                            $number = $_POST['your-number'];
+                        }else if (isset($_POST['your-company'])) {
+                            $company = $_POST['your-company'];
+                        }else if (isset($_POST['interested'])) {
+                            $interest = $_POST['interested'];
+                            if (isset($_POST['interested'])) {
+                                foreach ($interest as $interested){ 
+                                    $interests .= $interested .",";
+                                }
+                            }
+                        }else if (isset($_POST['your-name'])) {
+                            $message = $_POST['your-message'];
+                        }
+                        $messages = "Name : ". $name . "<br>Email : ". $email . "<br>Phone Number : ". $number . "<br>Company : ". $company . "<br>Interest : ". $interests . "<br>message ". $message;
+                        $message2 = "Thank you for your contact, we will contact you shortly.";
+                        $headers = "From:" . $from;
+                        $headers2 = "From:" . $to;
+
+                        //Recipients
+                        $mail->setFrom('info@spslogistics.io', 'Info SPS');
+                        $mail->addAddress($from, $from);
+                        $mail->isHTML(true);
+                        $mail->Subject = $subject;
+                        $mail->Body    = $message;
+                        $mail->AltBody = $message;
+                        $mail->send();
+
+                        $mail->setFrom('info@spslogistics.io', 'Info SPS');
+                        $mail->addAddress($from, $from);     //email tujuan
+                        $mail->isHTML(true);   //Set email format to HTML
+                        $mail->Subject = $subject2;
+                        $mail->Body    = $message2;
+                        $mail->AltBody = $message2;
+                        $mail->send();
+                        header('Location: ./index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
+                        // echo 'Message has been sent';
+                    }   
+
             } catch (Exception $e) {
-                header('Location: ./index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+                header('Location: index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
