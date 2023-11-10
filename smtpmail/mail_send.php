@@ -34,13 +34,13 @@
                     // $first_name = $_POST['first_name'];
                     // $last_name = $_POST['last_name'];
                     $subject = "Form Sign Up Spslogistics.io";
-                    $subject2 = "Copy of Your Form Sign Up Spslogistics.io";
+                    $subject2 = "Your Form Sign Up Spslogistics.io";
                     // $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
                     // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
                     $message = "New Sign Up user";
                     $message2 = "Thank you for your sign up.";
-                    $headers = "From:" . $from;
-                    $headers2 = "From:" . $to;
+                    // $headers = "From:" . $from;
+                    // $headers2 = "From:" . $to;
                     // mail($to,$subject,$message,$headers);
                     // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
                     // echo "Mail Sent. Thank you " . $from . ", we will contact you shortly.";
@@ -78,7 +78,7 @@
                         $to = "info@spslogistics.io"; // this is your Email address
                         $from = $_POST['your-email']; // this is the sender's Email address
                         $subject = "Form Contact Spslogistics.io";
-                        $subject2 = "Copy of Your Form Contact Spslogistics.io";
+                        $subject2 = "Your Form Contact Spslogistics.io";
                         $name ="";
                         $email ="";
                         $number ="";
@@ -106,16 +106,16 @@
                         }
                         $messages = "Name : ". $name . "<br>Email : ". $email . "<br>Phone Number : ". $number . "<br>Company : ". $company . "<br>Interest : ". $interests . "<br>message ". $message;
                         $message2 = "Thank you for your contact, we will contact you shortly.";
-                        $headers = "From:" . $from;
-                        $headers2 = "From:" . $to;
+                        // $headers = "From:" . $from;
+                        // $headers2 = "From:" . $to;
 
                         //Recipients
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
                         $mail->addAddress($from, $from);
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
-                        $mail->Body    = $message;
-                        $mail->AltBody = $message;
+                        $mail->Body    = $messages;
+                        $mail->AltBody = $messages;
                         $mail->send();
 
                         $mail->setFrom('info@spslogistics.io', 'Info SPS');
@@ -130,7 +130,7 @@
                     }   
 
             } catch (Exception $e) {
-                header('Location: index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+                header('Location: ./index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
