@@ -13,9 +13,9 @@
 
 $(window).load(function() {
     var cur_location = window.location.href;
-    if(cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
-    var idhash = decodeURI(location.hash.split('#')[1]);
-    $(".navbar-nav > li.active").removeClass('active');
+        if(cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
+        var idhash = decodeURI(location.hash.split('#')[1]);
+        $(".navbar-nav > li.active").removeClass('active');
         $(".navbar-nav > li."+idhash+"-active").addClass('active');
         console.log("hash:"+idhash);
     }

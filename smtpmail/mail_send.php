@@ -49,7 +49,8 @@
                 // $mail->send();
                 // echo 'Message has been sent';
 
-                if(isset($_POST['formtype'])=="signup"){    
+                if(isset($_POST['formtype'])=="signup"){  
+                    echo "signup";  
                     $to = "info@spslogistics.io"; // this is your Email address
                     $from = $_POST['email']; // this is the sender's Email address
                     // $first_name = $_POST['first_name'];
@@ -81,25 +82,26 @@
                     $mail->send();
 
                     // mail2
-                    //Recipients
-                    // $mail2->setFrom($to, $to);
-                    // $mail2->addAddress($from, $from);
-                    // $mail2->addReplyTo('tan@atech.software', 'Information'); 
-                    // $mail2->addCC('tan@atech.software');
-                    // $mail2->addBCC('tan@atech.software');
-                    // //Content
-                    // $mail2->isHTML(true);   //Set email format to HTML
-                    // $mail2->Subject = $subject2;
-                    // $mail2->Body    = $message2;
-                    // $mail2->AltBody = $message2;
-                    // $mail2->send();
-                    header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
+                    // Recipients
+                    $mail2->setFrom($to, $to);
+                    $mail2->addAddress($from, $from);
+                    $mail2->addReplyTo('tan@atech.software', 'Information'); 
+                    $mail2->addCC('tan@atech.software');
+                    $mail2->addBCC('tan@atech.software');
+                    //Content
+                    $mail2->isHTML(true);   //Set email format to HTML
+                    $mail2->Subject = $subject2;
+                    $mail2->Body    = $message2;
+                    $mail2->AltBody = $message2;
+                    $mail2->send();
+                    echo 'Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.';
+                    // header('Location: index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                 }   
 
 
             } catch (Exception $e) {
-                // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo);
+                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                // header('Message could not be sent. Mailer Error: '. $mail->ErrorInfo);
             }
     }        
 ?>
