@@ -130,7 +130,7 @@
                     }   
 
             } catch (Exception $e) {
-                header('Location: ./index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+                header('Location: ../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 ?>
