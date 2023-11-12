@@ -30,7 +30,7 @@
                 $mail->SMTPSecure = "tls";
                 $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                // if(isset($_POST['formtype'])=="signup"){    
+                if(isset($_POST['formtype'])=="signup"){    
                     $to = "info@spslogistics.io"; // this is your Email address
                     $from = $_POST['email']; // this is the sender's Email address
                     // $first_name = $_POST['first_name'];
@@ -53,7 +53,7 @@
                     //Recipients
                     $mail->setFrom($to, $to);
                     $mail->addAddress($to, $to);    //email tujuan
-                    // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
+                    $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('tan@atech.software'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addBCC('tan@atech.software'); // email bcc (bila tidak dibutuhkan bisa diberi pagar)
                     //Attachments
@@ -74,7 +74,7 @@
                     $mail->AltBody = $message2;
                     $mail->send();
                     header('Location: ../../index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
-                // } 
+                } 
             } catch (Exception $e) {
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

@@ -30,7 +30,7 @@
                 $mail->SMTPSecure = "tls";
                 $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                // if(isset($_POST['formtype'])=="contact"){
+                if(isset($_POST['formtype'])=="contact"){
                         $to = "info@spslogistics.io"; // this is your Email address
                         $from = $_POST['your-email']; // this is the sender's Email address
                         $subject = "Form Contact Spslogistics.io";
@@ -77,7 +77,7 @@
                         $mail->AltBody = $message2;
                         $mail->send();
                         header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
-                    // }   
+                    }   
 
             } catch (Exception $e) {
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
