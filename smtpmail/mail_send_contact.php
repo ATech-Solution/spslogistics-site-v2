@@ -62,20 +62,20 @@
                         //Recipients
                         $mail->setFrom($to, $to);
                         $mail->addAddress($to, $to);     //email tujuan
-                        $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
+                        // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
                         $mail->Body    = $messages;
                         $mail->AltBody = $messages;
                         $mail->send();
 
-                        $mail->setFrom($to, $to);
-                        $mail->addAddress($from, $from);     //email tujuan
-                        $mail->isHTML(true);   //Set email format to HTML
-                        $mail->Subject = $subject2;
-                        $mail->Body    = $message2;
-                        $mail->AltBody = $message2;
-                        $mail->send();
+                        // $mail->setFrom($to, $to);
+                        // $mail->addAddress($from, $from);     //email tujuan
+                        // $mail->isHTML(true);   //Set email format to HTML
+                        // $mail->Subject = $subject2;
+                        // $mail->Body    = $message2;
+                        // $mail->AltBody = $message2;
+                        // $mail->send();
                         header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
                     }   
 
