@@ -51,7 +51,7 @@
                     // You cannot use header and echo together. It's one or the other.
 
                     //Recipients
-                    $mail->setFrom($to, $to);
+                    $mail->setFrom($to, "info spslogistics.io");
                     $mail->addAddress($to, $to);    //email tujuan
                     $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('tan@atech.software'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
@@ -66,7 +66,7 @@
                     $mail->AltBody = $message;
                     $mail->send();
 
-                    $mail->setFrom($to, $to);
+                    $mail->setFrom($to, "info spslogistics.io");
                     $mail->addAddress($from, $from);     //email tujuan
                     $mail->isHTML(true);   //Set email format to HTML
                     $mail->Subject = $subject2;
