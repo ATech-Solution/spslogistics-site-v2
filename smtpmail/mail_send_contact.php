@@ -59,15 +59,15 @@
                         // $headers = "From:" . $from;
                         // $headers2 = "From:" . $to;
 
-                        //Recipients
-                        $mail->setFrom($to, "info@spslogistics.io");
-                        $mail->addAddress($to, "info spslogistics.io");    //email tujuan
-                        // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
-                        $mail->isHTML(true);
-                        $mail->Subject = $subject;
-                        $mail->Body    = $messages;
-                        $mail->AltBody = $messages;
-                        $mail->send();
+                        // //Recipients
+                        // $mail->setFrom($to, "info@spslogistics.io");
+                        // $mail->addAddress($to, "info spslogistics.io");    //email tujuan
+                        // // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
+                        // $mail->isHTML(true);
+                        // $mail->Subject = $subject;
+                        // $mail->Body    = $messages;
+                        // $mail->AltBody = $messages;
+                        // $mail->send();
 
                         $mail->setFrom($to, "info@spslogistics.io");
                         $mail->addAddress($from, $name);    //email tujuan

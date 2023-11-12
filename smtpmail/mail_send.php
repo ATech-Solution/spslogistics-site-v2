@@ -53,7 +53,7 @@
                     //Recipients
                     $mail->setFrom($to, "info spslogistics.io");
                     $mail->addAddress($to, "info spslogistics.io");    //email tujuan
-                    $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
+                    // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('tan@atech.software'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addBCC('tan@atech.software'); // email bcc (bila tidak dibutuhkan bisa diberi pagar)
                     //Attachments
@@ -66,13 +66,13 @@
                     $mail->AltBody = $message;
                     $mail->send();
 
-                    $mail->setFrom($to, "info spslogistics.io");
-                    $mail->addAddress($from, $from);     //email tujuan
-                    $mail->isHTML(true);   //Set email format to HTML
-                    $mail->Subject = $subject2;
-                    $mail->Body    = $message2;
-                    $mail->AltBody = $message2;
-                    $mail->send();
+                    // $mail->setFrom($to, "info spslogistics.io");
+                    // $mail->addAddress($from, $from);     //email tujuan
+                    // $mail->isHTML(true);   //Set email format to HTML
+                    // $mail->Subject = $subject2;
+                    // $mail->Body    = $message2;
+                    // $mail->AltBody = $message2;
+                    // $mail->send();
                     header('Location: ../../index.php?message=Signup Success. Thank you ' . $from . ', we will contact you shortly.');
                 } 
             } catch (Exception $e) {
