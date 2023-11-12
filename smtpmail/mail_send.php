@@ -52,7 +52,7 @@
 
                     //Recipients
                     $mail->setFrom($to, "info spslogistics.io");
-                    $mail->addAddress($to, $to);    //email tujuan
+                    $mail->addAddress($to, "info spslogistics.io");    //email tujuan
                     $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('tan@atech.software'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addBCC('tan@atech.software'); // email bcc (bila tidak dibutuhkan bisa diberi pagar)

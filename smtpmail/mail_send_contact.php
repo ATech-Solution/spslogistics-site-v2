@@ -61,7 +61,7 @@
 
                         //Recipients
                         $mail->setFrom($to, "info@spslogistics.io");
-                        $mail->addAddress($to, $to);     //email tujuan
+                        $mail->addAddress($to, "info spslogistics.io");    //email tujuan
                         // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
@@ -70,7 +70,7 @@
                         $mail->send();
 
                         $mail->setFrom($to, "info@spslogistics.io");
-                        $mail->addAddress($from, $from);     //email tujuan
+                        $mail->addAddress($from, $name);    //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
                         $mail->Body    = $message2;
