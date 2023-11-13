@@ -396,6 +396,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12"><!-- mail_handler.php -->
 							<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">
+							<!-- <form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->	
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
 								<!-- Email:  --><input class="mb-20" type="email" name="email" placeholder="Enter your email address here" required>
@@ -585,7 +586,8 @@
 						</div>
 						<div class="form-request">
 							<div class="row"><!-- mail_handler_contact.php -->
-								<form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+								<!-- <form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
+								<form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
 										<input type="text" class="form-control" name="your-name" placeholder="Your Name" required>
