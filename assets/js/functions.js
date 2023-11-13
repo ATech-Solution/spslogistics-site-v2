@@ -54,29 +54,30 @@ function checkActiveSection()
             //             wS1 = jQuery(this).scrollTop();
             
     //          console.log('scroll coordinate');
-             console.log("scroll coordinate"+hT+" "+wH+" "+wS);
+             console.log("scroll coordinate "+hT+" "+wH+" "+wS);
     //          if (wS > (hT+hH-wH)){
     // //           alert('you have scrolled to the locate-us');
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
     //          }
             
         $('.section').each(function(){
-          var sectionOffset = $(this).offset();                
+          var sectionOffset = $(this).offset();  
+                console.log("sectionOffset "+sectionOffset);       
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
                 if (fromTop === 0||fromTop === 30) {
-                        $(".navbar-nav li.slider-active").addClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li.slider-active").addClass("active");
                 } else if (fromTop === 946||fromTop === 1046) {
-                        $(".navbar-nav li.how-sps-works-active").addClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li.how-sps-works-active").addClass("active");
                 } else if (fromTop === 2484||fromTop === 2584) {    
-                        $(".navbar-nav li.pricing-active").addClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li.pricing-active").addClass("active");
                 } else if (fromTop === 3192||fromTop === 3292) {        
-                        $(".navbar-nav li.about-active").addClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li.about-active").addClass("active");
                 } else if (fromTop === 3789||fromTop === 3889) {        
-                        $(".navbar-nav li.footer-active").addClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li.footer-active").addClass("active");
                 } else {
-                        $(".navbar-nav li").removeClass("active");
+                        $("#navbar-collapse-1 .navbar-nav li").removeClass("active");
                 }      
         });
     }
