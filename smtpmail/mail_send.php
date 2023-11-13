@@ -22,13 +22,13 @@
                 // $mail->SMTPDebug = 2;  //Enable verbose debug output
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
-                $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
+                // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
                 $mail->SMTPAuth   = true;  //Enable SMTP authentication
                 $mail->Username   = 'AKIAUQUCCF6GSJDVC3L5'; //SMTP username
                 $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
                 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
                 $mail->SMTPSecure = "tls";
-                $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port       = 25;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 if(isset($_POST['formtype'])=="signup"){    
                     $to = "info@spslogistics.io"; // this is your Email address
@@ -76,7 +76,7 @@
 
                     // //Recipients
                     $mail->setFrom('info@spslogistics.io', 'Mailer');
-                    $mail->addAddress($from, "to");     //email tujuan
+                    $mail->addAddress($from, $from);     //email tujuan
                     // $mail->addReplyTo('emailtujuan@domainaddreply.com', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addCC('emailtujuan@domaincc.com'); // email cc (bila tidak dibutuhkan bisa diberi pagar)
                     // $mail->addBCC('emailtujuan@domainbcc.com'); // email bcc (bila tidak dibutuhkan bisa diberi pagar)
