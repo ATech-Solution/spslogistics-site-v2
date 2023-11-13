@@ -66,18 +66,18 @@ function checkActiveSection()
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                if (fromTop === 0) {
-                        $(".navbar-nav li.slider-active").addClass("active");
+                if (fromTop === 0||fromTop === 30) {
+                        $(".navbar-nav > li.slider-active").addClass("active");
                 } else if (fromTop === 946) {
-                        $(".navbar-nav li.how-sps-works-active").addClass("active");
+                        $(".navbar-nav > li.how-sps-works-active").addClass("active");
                 } else if (fromTop === 2484) {    
-                        $(".navbar-nav li.pricing-active").addClass("active");
+                        $(".navbar-nav > li.pricing-active").addClass("active");
                 } else if (fromTop === 3192) {        
-                        $(".navbar-nav li.about-active").addClass("active");
+                        $(".navbar-nav > li.about-active").addClass("active");
                 } else if (fromTop === 3789) {        
-                        $(".navbar-nav li.footer-active").addClass("active");
+                        $(".navbar-nav > li.footer-active").addClass("active");
                 } else {
-                        $(".navbar-nav li").removeClass("active");
+                        // $(".navbar-nav li").removeClass("active");
                 }      
         });
     }
@@ -103,10 +103,10 @@ $(window).scroll(checkActiveSection) ;
     });
 
     /* ------------------  ACTIVE MENU ------------------ */
-    $('.navbar-nav').on('click', 'li', function() {
-        $(".navbar-nav > li.active").removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('.navbar-nav').on('click', 'li', function() {
+    //     $(".navbar-nav > li.active").removeClass('active');
+    //     $(this).addClass('active');
+    // });
     
     /* ------------------  SCROLL TO ------------------ */
     var aScroll = $('a[data-scroll="scrollTo"]');
