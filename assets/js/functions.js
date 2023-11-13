@@ -43,6 +43,7 @@ function checkActiveSection()
             // var hH = $('.section').outerHeight(),
             // var wH = $(window).height(),
             // var wS = $(this).scrollTop();
+
             // var hT = jQuery('#locate-us').offset().top,
             //             hH = jQuery('#locate-us').outerHeight(),
             //             wH = jQuery(window).height(),
@@ -66,6 +67,7 @@ function checkActiveSection()
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
+                $(".navbar-nav > li.how-sps-works-active").addClass("active");
                 if (fromTop === 0||fromTop === 30) {
                         $(".navbar-nav > li.slider-active").addClass("active");
                 } else if (fromTop === 946||fromTop === 976) {
