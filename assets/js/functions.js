@@ -54,18 +54,17 @@ function checkActiveSection()
             //             wS1 = jQuery(this).scrollTop();
             
     //          console.log('scroll coordinate');
-    //          console.log((hT-wH) , wS);
+             console.log((hT-wH) , wS);
     //          if (wS > (hT+hH-wH)){
-    // //               alert('you have scrolled to the locate-us');
+    // //           alert('you have scrolled to the locate-us');
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
     //          }
             
         $('.section').each(function(){
           var sectionOffset = $(this).offset();                
-                // if (wS > (hT+hH-wH)) {
-                        
-                // } else 
-                if (fromTop === 0||fromTop === 30) {
+                if (wS > (hT+hH-wH)) {
+                        $(".navbar-nav li:first").addClass("active");
+                } else if (fromTop === 0||fromTop === 30) {
                         $(".navbar-nav li:first").addClass("active");
                 } else if (fromTop === 946||fromTop === 1046) {
                         $(".navbar-nav li:nth-child(2)").addClass("active");
