@@ -39,10 +39,10 @@ function checkActiveSection()
     //              }
     //          });
             //locate us scroll highlight home
-            var hT = jQuery('.section').offset().top,
-                hH = jQuery('.section').outerHeight(),
-                wH = jQuery(window).height(),
-                wS = jQuery(this).scrollTop();
+            var hT = $('.section').offset().top,
+                hH = $('.section').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
             // var hT = jQuery('#locate-us').offset().top,
             //             hH = jQuery('#locate-us').outerHeight(),
             //             wH = jQuery(window).height(),

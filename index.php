@@ -573,7 +573,7 @@
 
 	<!-- Footer #5
 	============================================= -->
-	<footer id="footer" class="footer">
+	<footer id="footer" class="footer section">
 			<!-- Widget Section
 		============================================= -->
 		<div class="footer-widget cta">
