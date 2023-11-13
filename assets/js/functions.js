@@ -68,17 +68,18 @@ function checkActiveSection()
                 // } else 
                 if (fromTop === 0||fromTop === 30) {
                         $(".navbar-nav > li.slider-active").addClass("active");
-                } else if (fromTop === 946) {
+                } else if (fromTop === 946||fromTop === 976) {
                         $(".navbar-nav > li.how-sps-works-active").addClass("active");
-                } else if (fromTop === 2484) {    
+                } else if (fromTop === 2484||fromTop === 2514) {    
                         $(".navbar-nav > li.pricing-active").addClass("active");
-                } else if (fromTop === 3192) {        
+                } else if (fromTop === 3192||fromTop === 3222) {        
                         $(".navbar-nav > li.about-active").addClass("active");
-                } else if (fromTop === 3789) {        
+                } else if (fromTop === 3789||fromTop === 3819) {        
                         $(".navbar-nav > li.footer-active").addClass("active");
                 } else {
-                        // $(".navbar-nav li").removeClass("active");
+                        $(".navbar-nav > li").removeClass("active");
                 }      
+
         });
     }
 }
@@ -89,7 +90,7 @@ function checkActiveSection()
 //   }
 // }
 $(window).scroll(checkActiveSection) ;
-
+$(document).ready(checkActiveSection) ;
 
 (function($) {
     "use strict";
