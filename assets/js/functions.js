@@ -21,20 +21,74 @@ $(window).load(function() {
     }
 });
 
+function checkActiveSection()
+{
+    if ($(window).width() > 700) {
+        var fromTop = $(window).scrollTop();
+         console.log(fromTop);
+    //          var input = document.getElementById("header-container");
+    //          // Execute a function when the user presses a key on the keyboard
+    //          input.addEventListener("keypress", function(event) {
+    //              // If the user presses the "Enter" key on the keyboard
+    //              if (event.key === "Enter") {
+    //                  // Cancel the default action, if needed
+    //                  event.preventDefault();
+    //                  // Trigger the button element with a click
+    //                  alert(fromTop);
+    //              // document.getElementById("myBtn").click();
+    //              }
+    //          });
+            //locate us scroll highlight home
+            var hT = jQuery('.section').offset().top,
+                hH = jQuery('.section').outerHeight(),
+                wH = jQuery(window).height(),
+                wS = jQuery(this).scrollTop();
+            // var hT = jQuery('#locate-us').offset().top,
+            //             hH = jQuery('#locate-us').outerHeight(),
+            //             wH = jQuery(window).height(),
+            //             wS = jQuery(this).scrollTop();
+            // //the team scroll highlight home
+            // var hT1 = jQuery('#the-team').offset().top,
+            //             hH1 = jQuery('#the-team').outerHeight(),
+            //             wH1 = jQuery(window).height(),
+            //             wS1 = jQuery(this).scrollTop();
+            
+    //          console.log('scroll coordinate');
+    //          console.log((hT-wH) , wS);
+    //          if (wS > (hT+hH-wH)){
+    // //               alert('you have scrolled to the locate-us');
+    //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
+    //          }
+            
+        $('.section').each(function(){
+          var sectionOffset = $(this).offset();                
+                if (wS > (hT+hH-wH)) {
+                        $(".navbar-nav > li").addClass("active");
+                // } else if (wS1 > (hT1+hH1-wH1)) {
+    //                $("#nav-wrapper li:first a").addClass("elementor-item-active");
+                // } else if (fromTop === 0||fromTop === 30) {
+                //         $("#nav-wrapper li:first a").addClass("elementor-item-active");
+                // } else if (fromTop === 65) {
+                //         $("#nav-wrapper li a[aria-current='page']").addClass("elementor-item-active");
+                } else {
+                        $(".navbar-nav > li").removeClass("active");
+                }
+                //reset click effect
+                // $("#nav-wrapper li a").removeClass("mPS2id-clicked");        
+        });
+    }
+}
+
+// function addClassNavMobile() {
+//   if ($(window).width() < 700) {
+//     $('#nav-wrapper .elementor-nav-menu--dropdown ul').attr('id','nav-mobile');
+//   }
+// }
+$(window).scroll(checkActiveSection) ;
+
+
 (function($) {
     "use strict";
-
-    /* ------------------  Background INSERT ------------------ */
-
-    var $bgSection = $(".bg-section");
-
-    $bgSection.each(function() {
-        var bgSrc = $(this).children("img").attr("src");
-        var bgUrl = 'url(' + bgSrc + ')';
-        $(this).parent().css("backgroundImage", bgUrl);
-        $(this).parent().addClass("bg-section");
-        $(this).remove();
-    });
 
     /* ------------------ HEADER AFFIX ------------------ */
     var $navAffix = $(".home .header-fixed .navbar-fixed-top");
@@ -60,6 +114,18 @@ $(window).load(function() {
                 scrollTop: target.offset().top-100
             }, 1000);
         }
+    });
+
+    /* ------------------  Background INSERT ------------------ */
+
+    var $bgSection = $(".bg-section");
+
+    $bgSection.each(function() {
+        var bgSrc = $(this).children("img").attr("src");
+        var bgUrl = 'url(' + bgSrc + ')';
+        $(this).parent().css("backgroundImage", bgUrl);
+        $(this).parent().addClass("bg-section");
+        $(this).remove();
     });
 
     /* ------------------  AJAX MAILCHIMP ------------------ */

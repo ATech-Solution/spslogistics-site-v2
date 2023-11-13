@@ -17,12 +17,11 @@
 
             try {
                 //Server settings
-                $mail->SMTPDebug = 3;  //Enable verbose debug output
+                // $mail->SMTPDebug = 3;  //Enable verbose debug output
                 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;  //Enable verbose debug output
                 // $mail->SMTPDebug = 2;  //Enable verbose debug output
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
-                // $mail->Host       = 'ssl://email-smtp.us-west-2.amazonaws.com';
                 $mail->SMTPAuth   = true;  //Enable SMTP authentication
                 $mail->Username   = 'AKIAUQUCCF6GSJDVC3L5'; //SMTP username
                 $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
@@ -60,16 +59,16 @@
                         // $headers2 = "From:" . $to;
 
                         // //Recipients
-                        // $mail->setFrom($to, "info@spslogistics.io");
-                        // $mail->addAddress($to, "info spslogistics.io");    //email tujuan
-                        // // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
-                        // $mail->isHTML(true);
-                        // $mail->Subject = $subject;
-                        // $mail->Body    = $messages;
-                        // $mail->AltBody = $messages;
-                        // $mail->send();
+                        $mail->setFrom($to, $to);
+                        $mail->addAddress($to, $to);    //email tujuan
+                        // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
+                        $mail->isHTML(true);
+                        $mail->Subject = $subject;
+                        $mail->Body    = $messages;
+                        $mail->AltBody = $messages;
+                        $mail->send();
 
-                        $mail->setFrom($to, "info@spslogistics.io");
+                        $mail->setFrom($to, $to);
                         $mail->addAddress($from, $name);    //email tujuan
                         $mail->isHTML(true);   //Set email format to HTML
                         $mail->Subject = $subject2;
