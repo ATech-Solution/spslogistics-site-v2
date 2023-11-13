@@ -62,14 +62,21 @@ function checkActiveSection()
             
         $('.section').each(function(){
           var sectionOffset = $(this).offset();                
-                if (wS > (hT+hH-wH)) {
+                // if (wS > (hT+hH-wH)) {
                         $(".navbar-nav > li").addClass("active");
                 // } else if (wS1 > (hT1+hH1-wH1)) {
     //                $("#nav-wrapper li:first a").addClass("elementor-item-active");
-                // } else if (fromTop === 0||fromTop === 30) {
-                //         $("#nav-wrapper li:first a").addClass("elementor-item-active");
-                // } else if (fromTop === 65) {
-                //         $("#nav-wrapper li a[aria-current='page']").addClass("elementor-item-active");
+                // } else 
+                if (fromTop === 0||fromTop === 30) {
+                        $(".navbar-nav > li:first").addClass("active");
+                } else if (fromTop === 946) {
+                        $(".navbar-nav > li:nth-child(2)").addClass("active");
+                } else if (fromTop === 2484) {    
+                        $(".navbar-nav > li:nth-child(3)").addClass("active");
+                } else if (fromTop === 3192) {        
+                        $(".navbar-nav > li:nth-child(4)").addClass("active");
+                } else if (fromTop === 3789) {        
+                        $(".navbar-nav > li:nth-child(5)").addClass("active");
                 } else {
                         $(".navbar-nav > li").removeClass("active");
                 }
