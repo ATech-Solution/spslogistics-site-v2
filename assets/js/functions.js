@@ -91,8 +91,8 @@ function checkActiveSection()
 //     $('#nav-wrapper .elementor-nav-menu--dropdown ul').attr('id','nav-mobile');
 //   }
 // }
-$(window).scroll(checkActiveSection) ;
-$(document).ready(checkActiveSection) ;
+// $(window).scroll(checkActiveSection) ;
+// $(document).ready(checkActiveSection) ;
 
 (function($) {
     "use strict";
@@ -106,10 +106,10 @@ $(document).ready(checkActiveSection) ;
     });
 
     /* ------------------  ACTIVE MENU ------------------ */
-    // $('.navbar-nav').on('click', 'li', function() {
-    //     $(".navbar-nav > li.active").removeClass('active');
-    //     $(this).addClass('active');
-    // });
+    $('.navbar-nav').on('click', 'li', function() {
+        $(".navbar-nav > li.active").removeClass('active');
+        $(this).addClass('active');
+    });
     
     /* ------------------  SCROLL TO ------------------ */
     var aScroll = $('a[data-scroll="scrollTo"]');
