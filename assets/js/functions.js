@@ -39,10 +39,10 @@ function checkActiveSection()
     //              }
     //          });
             //locate us scroll highlight home
-            var hT = $('.section').offset().top,
-                hH = $('.section').outerHeight(),
-                wH = $(window).height(),
-                wS = $(this).scrollTop();
+            // var hT = $('.section').offset().top,
+            // var hH = $('.section').outerHeight(),
+            // var wH = $(window).height(),
+            // var wS = $(this).scrollTop();
             // var hT = jQuery('#locate-us').offset().top,
             //             hH = jQuery('#locate-us').outerHeight(),
             //             wH = jQuery(window).height(),
@@ -54,7 +54,7 @@ function checkActiveSection()
             //             wS1 = jQuery(this).scrollTop();
             
     //          console.log('scroll coordinate');
-             console.log("scroll coordinate "+hT+" "+wH+" "+wS);
+             // console.log("scroll coordinate "+hT+" "+wH+" "+wS);
     //          if (wS > (hT+hH-wH)){
     // //           alert('you have scrolled to the locate-us');
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
@@ -62,22 +62,22 @@ function checkActiveSection()
             
         $('.section').each(function(){
           var sectionOffset = $(this).offset();  
-                console.log("sectionOffset "+sectionOffset);       
+                // console.log("sectionOffset "+sectionOffset);       
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                if (fromTop === 0||fromTop === 30) {
-                        $("#navbar-collapse-1 .navbar-nav li.slider-active").addClass("active");
-                } else if (fromTop === 946||fromTop === 1046) {
-                        $("#navbar-collapse-1 .navbar-nav li.how-sps-works-active").addClass("active");
-                } else if (fromTop === 2484||fromTop === 2584) {    
-                        $("#navbar-collapse-1 .navbar-nav li.pricing-active").addClass("active");
-                } else if (fromTop === 3192||fromTop === 3292) {        
-                        $("#navbar-collapse-1 .navbar-nav li.about-active").addClass("active");
-                } else if (fromTop === 3789||fromTop === 3889) {        
-                        $("#navbar-collapse-1 .navbar-nav li.footer-active").addClass("active");
+                if (fromTop === 0) {
+                        $(".navbar-nav li.slider-active").addClass("active");
+                } else if (fromTop === 946) {
+                        $(".navbar-nav li.how-sps-works-active").addClass("active");
+                } else if (fromTop === 2484) {    
+                        $(".navbar-nav li.pricing-active").addClass("active");
+                } else if (fromTop === 3192) {        
+                        $(".navbar-nav li.about-active").addClass("active");
+                } else if (fromTop === 3789) {        
+                        $(".navbar-nav li.footer-active").addClass("active");
                 } else {
-                        $("#navbar-collapse-1 .navbar-nav li").removeClass("active");
+                        $(".navbar-nav li").removeClass("active");
                 }      
         });
     }
