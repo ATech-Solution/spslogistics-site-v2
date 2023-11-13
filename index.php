@@ -82,7 +82,7 @@
 						<li class="how-sps-works-active"><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
 						<li class="pricing-active"><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
 						<li class="about-active"><a data-scroll="scrollTo" href="#about">About us</a>
-						<li class="ooter-active"><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
+						<li class="footer-active"><a data-scroll="scrollTo" href="#footer">Contact us</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
