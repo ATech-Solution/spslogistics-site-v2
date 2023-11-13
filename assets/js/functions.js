@@ -63,7 +63,7 @@ function checkActiveSection()
         $('.section').each(function(){
           var sectionOffset = $(this).offset();                
                 // if (wS > (hT+hH-wH)) {
-                        $(".navbar-nav > li").addClass("active");
+                        // $(".navbar-nav > li").addClass("active");
                 // } else if (wS1 > (hT1+hH1-wH1)) {
     //                $("#nav-wrapper li:first a").addClass("elementor-item-active");
                 // } else 
