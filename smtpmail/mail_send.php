@@ -37,7 +37,7 @@
                     $subject2 = "Your Form Sign Up Spslogistics.io";
                     // $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
                     // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-                    $message = "New Sign Up user";
+                    $message = "New Sign Up user" .$from;
                     $message2 = "Thank you for your sign up.";
                     // $headers = "From:" . $from;
                     // $headers2 = "From:" . $to;

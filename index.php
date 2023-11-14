@@ -586,8 +586,8 @@
 						</div>
 						<div class="form-request">
 							<div class="row"><!-- mail_handler_contact.php -->
-								<!-- <form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
-								<form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">
+								<form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
 										<input type="text" class="form-control" name="your-name" placeholder="Your Name" required>
