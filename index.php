@@ -333,9 +333,9 @@
 				</div>	
 			</div>
 			<div class="row partner-list pt-30 desktopView">
-					<div class="col-xs-4 col-sm-4 col-md-3">
+					<div class="col-xs-4 col-sm-2 col-md-3">
 					</div>
-					<div class="col-xs-4 col-sm-4 col-md-6">
+					<div class="col-xs-4 col-sm-8 col-md-6">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-6 p-xs">
 								<img src="assets/img/iconpartner4.png" style="width:228px;height: 49px;" alt="icon 4 partner">
@@ -345,7 +345,7 @@
 							</div>
 						</div>	
 					</div>	
-					<div class="col-xs-4 col-sm-4 col-md-3">
+					<div class="col-xs-4 col-sm-2 col-md-3">
 					</div>	
 			</div>	
 			<div class="row partner-list pt-30 mobileView  pr-30 pl-30">

@@ -618,7 +618,9 @@ p{color: #272727!important;opacity: 1!important;}
         padding-right: 20px!important;
         margin-right: 30px!important;
     }
-    #footer input[type="text"], input[type="email"], input[type="number"] {
+    #footer input[type="text"], 
+    #footer input[type="email"], 
+    #footer input[type="number"] {
         display: block!important;
         width: 220px!important;
     }
@@ -657,7 +659,9 @@ p{color: #272727!important;opacity: 1!important;}
         padding-right: 20px!important;
         margin-right: 30px!important;
     }
-    #footer input[type="text"], input[type="email"], input[type="number"] {
+    #footer input[type="text"], 
+    #footer input[type="email"], 
+    #footer input[type="number"] {
         display: block;
         width: 220px;
     }
@@ -682,6 +686,16 @@ p{color: #272727!important;opacity: 1!important;}
     }
 
 }  
+@media only screen and (min-width: 767px) and (max-width: 768px) {
+    #pricing .col-xs-12.col-sm-12.col-md-2{display: none!important;}
+    #pricing .col-xs-12.col-sm-12.col-md-8 {
+        width: 100%!important;
+    }   
+    #pricing .col-xs-12.col-sm-12.col-md-6.p-0{
+        width: 50%!important;
+    }
+}
+
 /* Small Devices */
 /* Custom, iPhone Retina / Tablets */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -700,6 +714,9 @@ p{color: #272727!important;opacity: 1!important;}
     }
     #pricing .col-xs-12.col-sm-12.col-md-6 {
         padding: 0 15px!important;
+    }
+    #pricing .feature-panel .feature--content h3 {
+        font-size: 16px;
     }
 }
 /* Extra Small Devices */ 
@@ -906,6 +923,5 @@ p{color: #272727!important;opacity: 1!important;}
         height: 50px!important;
     }
     
-
 
 }
