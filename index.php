@@ -219,7 +219,7 @@
 			<!-- .row end -->
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 ml-150 desktopView">
-					<img src="assets/img/how-sps-works-content.svg" alt="top banner">
+					<img class="mainImg" src="assets/img/how-sps-works-content.svg" alt="top banner">
 				</div>
 				<!-- Panel #1 -->
 				<div class="col-xs-12 col-sm-12 col-md-4 mobileView">
