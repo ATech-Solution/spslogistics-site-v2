@@ -702,7 +702,7 @@
 								</li>
 							</ul>
 							<div class="addInfo">
-								<a href="terms-and-conditions.php">Terms and Conditions</a>  |  <a href="privacy-policy.php">Privacy Policy</a>
+								<a href="terms-and-condition.php">Terms and Condition</a>   |   <a href="privacy-policy.php">Privacy Policy</a>
 							</div>
 						</div>
 					</div>

@@ -36,7 +36,7 @@
 
 	<!-- Document Title
     ============================================= -->
-	<title>SPS | Terms and Conditions</title>
+	<title>SPS | Terms and Condition</title>
 
 	<!-- Google tag (gtag.js) -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209400994"></script> -->
@@ -112,7 +112,7 @@
 							<span><i class="fa fa-comment"></i> 3 comments</span>
 						</div> -->
 						<div class="entry--title">
-							<h2 class="heading--title">Terms and Conditions</h2>
+							<h2 class="heading--title">Terms and Condition</h2>
 						</div>
 						<div class="entry--content">
 								<p>Welcome to SPS Logistics!</p>
