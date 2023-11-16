@@ -36,7 +36,7 @@
 
 	<!-- Document Title
     ============================================= -->
-	<title>SPS Logistics | All in one logistics solution</title>
+	<title>SPS | End To End Supply Chain & Logistics Solution</title>
 
 	<!-- Google tag (gtag.js) -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209400994"></script> -->
@@ -666,7 +666,8 @@
 								<li>
 									<div class="head">Business Inquiry</div>  
 									<p class="pb-0 mb-30">+852 2186 7961 <br>
-										<a href="https://wa.me/85298263633">+852 9826 3633 (WhatsApp)</a><br>
+										<a href="https://wa.me/8617725603096">
+										+86 1772 560 3096 (WhatsApp)</a><br>
 										<a href="mailto:info@spslogistics.io">info@spslogistics.io</a>
 									</p>
 								</li>

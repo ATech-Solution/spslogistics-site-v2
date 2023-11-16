@@ -36,7 +36,7 @@
 
 	<!-- Document Title
     ============================================= -->
-	<title>SPS Logistics | Privacy Policy</title>
+	<title>SPS | Privacy Policy</title>
 
 	<!-- Google tag (gtag.js) -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209400994"></script> -->

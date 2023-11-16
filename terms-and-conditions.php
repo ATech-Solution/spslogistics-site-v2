@@ -36,7 +36,7 @@
 
 	<!-- Document Title
     ============================================= -->
-	<title>SPS Logistics | Terms and Conditions</title>
+	<title>SPS | Terms and Conditions</title>
 
 	<!-- Google tag (gtag.js) -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209400994"></script> -->

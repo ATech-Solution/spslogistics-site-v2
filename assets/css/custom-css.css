@@ -94,6 +94,7 @@ section {
     font-weight: 400;
     line-height: 1;
     margin-bottom: 0;*/
+    font-size: 40px;
     text-transform: none;
 }
 .heading .heading--desc {
@@ -179,7 +180,7 @@ p{color: #272727!important;opacity: 1!important;}
 }
 .count-box .counting {
     color: #0066CC;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
     font-family: 'IBMPlexSans-SemiBold';
     line-height: 1;
@@ -218,7 +219,7 @@ p{color: #272727!important;opacity: 1!important;}
         font-weight: bold;
         line-height: 1;
         margin-bottom: 14px;
-        text-transform: capitalize;
+        text-transform: none;
     }
     .feature-left .feature-panel .feature--icon {
         width: fit-content;
@@ -265,7 +266,8 @@ p{color: #272727!important;opacity: 1!important;}
         font-size: 16px;
     }
     #sign-up-today p.heading--desc {
-        color: #161616;
+        color: #161616!important;
+        font-size: 15px;
     }
     .button {
         background-color: #0066CC;
@@ -357,7 +359,12 @@ p{color: #272727!important;opacity: 1!important;}
         border-bottom: 1px solid #fff;
         margin-bottom: 50px;
         text-transform: none;
-        }
+        -moz-appearance: textfield!important;
+    }
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
     textarea.form-control{
         width: 740px;
         height: auto;
