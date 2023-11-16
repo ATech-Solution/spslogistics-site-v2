@@ -60,7 +60,13 @@ cant more than 1
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('fonts/Lato-Bold.woff2') format('woff2'),
+         /*url('fonts/Lato-Bold.woff') format('woff');*/
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'latolight';
     src: url('fonts/lato-light-webfont.woff2') format('woff2'),
@@ -111,6 +117,7 @@ p{color: #272727!important;opacity: 1!important;}
 .white-light-heading-footer {color: #ffffffc4!important;}
 
 .top-notification{
+    font-family: 'Lato';
     height: 40px;
     background-color: #FBD206;
     color: #272727;
@@ -119,7 +126,7 @@ p{color: #272727!important;opacity: 1!important;}
     line-height: 36px;
     text-align: center;
 }
-.top-notification strong{color: #272727!important;}
+.top-notification strong{color: #272727!important;font-weight: bold;font-family: Lato-Bold;}
 .top-notification a{padding-right: 5px;text-decoration: underline;}
 
 
