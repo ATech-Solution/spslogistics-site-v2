@@ -12,6 +12,7 @@
 */
 
 $(window).load(function() {
+    // scroll from other page
     var cur_location = window.location.href;
         if(cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
         var idhash = decodeURI(location.hash.split('#')[1]);
@@ -26,6 +27,7 @@ function checkActiveSection()
     if ($(window).width() > 700) {
         var fromTop = $(window).scrollTop();
          console.log("fromTop "+fromTop);
+
     //          var input = document.getElementById("header-container");
     //          // Execute a function when the user presses a key on the keyboard
     //          input.addEventListener("keypress", function(event) {
@@ -71,16 +73,16 @@ function checkActiveSection()
                 if (fromTop === 0||fromTop === 30) {
                         console.log("home"); 
                         $(".navbar-nav li.slider-active").addClass("active");
-                } else if (fromTop === 946) {
+                } else if (fromTop >= 946) {
                         console.log("hsw"); 
                         $(".navbar-nav li.how-sps-works-active").addClass("active");
-                } else if (fromTop === 2484) {    
+                } else if (fromTop >= 2484) {    
                         console.log("pri"); 
                         $(".navbar-nav li.pricing-active").addClass("active");
-                } else if (fromTop === 3192) {        
+                } else if (fromTop >= 3192) {        
                         console.log("abo"); 
                         $(".navbar-nav li.about-active").addClass("active");
-                } else if (fromTop === 3789) {        
+                } else if (fromTop >= 3789) {        
                         console.log("fot"); 
                         $(".navbar-nav li.footer-active").addClass("active");
                 } else {
@@ -112,22 +114,22 @@ $(document).ready(checkActiveSection) ;
     });
 
     /* ------------------  ACTIVE MENU ------------------ */
-    // $('.navbar-nav').on('click', 'li', function() {
-    //     $(".navbar-nav > li.active").removeClass('active');
-    //     $(this).addClass('active');
-    // });
+    $('.navbar-nav').on('click', 'li', function() {
+        $(".navbar-nav > li.active").removeClass('active');
+        $(this).addClass('active');
+    });
     
     /* ------------------  SCROLL TO ------------------ */
-    // var aScroll = $('a[data-scroll="scrollTo"]');
-    // aScroll.on('click', function(event) {
-    //     var target = $($(this).attr('href'));
-    //     if (target.length) {
-    //         event.preventDefault();
-    //         $('html, body').animate({
-    //             scrollTop: target.offset().top-100
-    //         }, 1000);
-    //     }
-    // });
+    var aScroll = $('a[data-scroll="scrollTo"]');
+    aScroll.on('click', function(event) {
+        var target = $($(this).attr('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top-100
+            }, 1000);
+        }
+    });
 
     /* ------------------  Background INSERT ------------------ */
 
