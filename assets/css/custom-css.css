@@ -161,7 +161,10 @@ p{color: #272727!important;opacity: 1!important;}
 .slideDesktopImg{
     width:650px;
 }
-
+.counter-containerP{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 .counter{margin-top: 0px;}
 .upperCount {
     margin: 0 auto;
