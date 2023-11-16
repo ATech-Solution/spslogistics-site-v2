@@ -61,13 +61,13 @@ function checkActiveSection()
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
     //          }
             
-        $('.section').each(function(){
-          var sectionOffset = $(this).offset();  
+        // $('.section').each(function(){
+          // var sectionOffset = $(this).offset();  
                 // console.log("sectionOffset "+sectionOffset);       
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                $(".navbar-nav > li.how-sps-works-active").addClass("active");
+                // $(".navbar-nav > li.how-sps-works-active").addClass("active");
                 if (fromTop === 0||fromTop === 30) {
                         $(".navbar-nav > li.slider-active").addClass("active");
                 } else if (fromTop === 946||fromTop === 976) {
@@ -82,7 +82,7 @@ function checkActiveSection()
                         $(".navbar-nav > li").removeClass("active");
                 }      
 
-        });
+        // });
     }
 }
 
