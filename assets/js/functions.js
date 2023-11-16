@@ -61,28 +61,34 @@ function checkActiveSection()
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
     //          }
             
-        // $('.section').each(function(){
-          // var sectionOffset = $(this).offset();  
+        $('.section').each(function(){
+          var sectionOffset = $(this).offset();  
                 // console.log("sectionOffset "+sectionOffset);       
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
                 // $(".navbar-nav > li.how-sps-works-active").addClass("active");
                 if (fromTop === 0||fromTop === 30) {
-                        $(".navbar-nav > li.slider-active").addClass("active");
+                        console.log("home"); 
+                        $(".navbar-nav li.slider-active").addClass("active");
                 } else if (fromTop === 946||fromTop === 976) {
-                        $(".navbar-nav > li.how-sps-works-active").addClass("active");
+                        console.log("hsw"); 
+                        $(".navbar-nav li.how-sps-works-active").addClass("active");
                 } else if (fromTop === 2484||fromTop === 2514) {    
-                        $(".navbar-nav > li.pricing-active").addClass("active");
+                        console.log("pri"); 
+                        $(".navbar-nav li.pricing-active").addClass("active");
                 } else if (fromTop === 3192||fromTop === 3222) {        
-                        $(".navbar-nav > li.about-active").addClass("active");
+                        console.log("abo"); 
+                        $(".navbar-nav li.about-active").addClass("active");
                 } else if (fromTop === 3789||fromTop === 3819) {        
-                        $(".navbar-nav > li.footer-active").addClass("active");
+                        console.log("fot"); 
+                        $(".navbar-nav li.footer-active").addClass("active");
                 } else {
-                        $(".navbar-nav > li").removeClass("active");
+                        console.log("remove"); 
+                        $(".navbar-nav li").removeClass("active");
                 }      
 
-        // });
+        });
     }
 }
 
@@ -91,8 +97,8 @@ function checkActiveSection()
 //     $('#nav-wrapper .elementor-nav-menu--dropdown ul').attr('id','nav-mobile');
 //   }
 // }
-// $(window).scroll(checkActiveSection) ;
-// $(document).ready(checkActiveSection) ;
+$(window).scroll(checkActiveSection) ;
+$(document).ready(checkActiveSection) ;
 
 (function($) {
     "use strict";
