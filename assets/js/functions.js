@@ -69,7 +69,7 @@ function checkActiveSection()
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                if (fromTop === 0||fromTop === 30) {
+                if (fromTop >= 0||fromTop <= 714) {
                         console.log("home");
                         $(".navbar-nav li.slider-active").addClass("active");
                 } else if (fromTop >= 946 || fromTop <= 2003) {
