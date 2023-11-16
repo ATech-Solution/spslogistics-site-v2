@@ -57,7 +57,7 @@
 	<?php if(isset($_GET['message'])){ ?>    
 	    	<div class="top-notification" style="background-color: #06fb21;"><?php echo $_GET['message'];?></div>
 	<?php } else { ?>
-		<div class="top-notification"><a data-scroll="scrollTo" href="#sign-up-today"><strong>Click here</strong></a> to SIGN UP TODAY to receive a <strong>free consultation</strong> & <strong>2 months free-storage</strong> with us!</div>
+		<div class="top-notification"><a data-scroll="scrollTo" href="#sign-up-today"><strong>Click here</strong></a> to SIGN UP TODAY to receive a <strong>free sourcing consultation</strong> & <strong>2 months free-storage</strong> with us!</div>
 	<?php } ?>    
 
 	<header id="navbar-spy" class="header header-1 header-transparent header-fixed">
