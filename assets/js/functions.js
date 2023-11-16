@@ -63,29 +63,33 @@ function checkActiveSection()
     //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
     //          }
             
-        $('.section').each(function(){
-          var sectionOffset = $(this).offset();  
+        // $('.section').each(function(){
+          // var sectionOffset = $(this).offset();  
                 // console.log("sectionOffset "+sectionOffset);       
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                // $(".navbar-nav > li.how-sps-works-active").addClass("active");
                 if (fromTop === 0||fromTop === 30) {
+                        console.log("home");
                         $(".navbar-nav li.slider-active").addClass("active");
                 } else if (fromTop >= 946 || fromTop <= 2003) {
+                        console.log("hsw");
                         $(".navbar-nav li.how-sps-works-active").addClass("active");
                 } else if (fromTop >= 2499 || fromTop <= 3132) {
+                        console.log("p");
                         $(".navbar-nav li.pricing-active").addClass("active");
                 } else if (fromTop >= 3134 || fromTop <= 3807) {
+                        console.log("ab");
                         $(".navbar-nav li.about-active").addClass("active");
                 } else if (fromTop >= 3807) {
+                        console.log("fot");
                         $(".navbar-nav li.footer-active").addClass("active");
                 } else {
                         console.log("remove"); 
                         $(".navbar-nav li").removeClass("active");
                 }      
 
-        });
+        // });
     }
 }
 
