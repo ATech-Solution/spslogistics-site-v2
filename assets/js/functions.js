@@ -71,16 +71,16 @@ function checkActiveSection()
                 if (fromTop === 0||fromTop === 30) {
                         console.log("home"); 
                         $(".navbar-nav li.slider-active").addClass("active");
-                } else if (fromTop === 946||fromTop === 976) {
+                } else if (fromTop === 946) {
                         console.log("hsw"); 
                         $(".navbar-nav li.how-sps-works-active").addClass("active");
-                } else if (fromTop === 2484||fromTop === 2514) {    
+                } else if (fromTop === 2484) {    
                         console.log("pri"); 
                         $(".navbar-nav li.pricing-active").addClass("active");
-                } else if (fromTop === 3192||fromTop === 3222) {        
+                } else if (fromTop === 3192) {        
                         console.log("abo"); 
                         $(".navbar-nav li.about-active").addClass("active");
-                } else if (fromTop === 3789||fromTop === 3819) {        
+                } else if (fromTop === 3789) {        
                         console.log("fot"); 
                         $(".navbar-nav li.footer-active").addClass("active");
                 } else {
@@ -112,22 +112,22 @@ $(document).ready(checkActiveSection) ;
     });
 
     /* ------------------  ACTIVE MENU ------------------ */
-    $('.navbar-nav').on('click', 'li', function() {
-        $(".navbar-nav > li.active").removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('.navbar-nav').on('click', 'li', function() {
+    //     $(".navbar-nav > li.active").removeClass('active');
+    //     $(this).addClass('active');
+    // });
     
     /* ------------------  SCROLL TO ------------------ */
-    var aScroll = $('a[data-scroll="scrollTo"]');
-    aScroll.on('click', function(event) {
-        var target = $($(this).attr('href'));
-        if (target.length) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top-100
-            }, 1000);
-        }
-    });
+    // var aScroll = $('a[data-scroll="scrollTo"]');
+    // aScroll.on('click', function(event) {
+    //     var target = $($(this).attr('href'));
+    //     if (target.length) {
+    //         event.preventDefault();
+    //         $('html, body').animate({
+    //             scrollTop: target.offset().top-100
+    //         }, 1000);
+    //     }
+    // });
 
     /* ------------------  Background INSERT ------------------ */
 
