@@ -666,9 +666,9 @@
 								<li>
 									<div class="head">Business Inquiry</div>  
 									<p class="pb-0 mb-30">+852 2186 7961 <br>
-										<a href="https://wa.me/8617725603096">
+										<a href="https://wa.me/8617725603096" target="_blank">
 										+86 1772 560 3096 (WhatsApp)</a><br>
-										<a href="mailto:info@spslogistics.io">info@spslogistics.io</a>
+										<a href="mailto:info@spslogistics.io" target="_blank">info@spslogistics.io</a>
 									</p>
 								</li>
 								<li>
