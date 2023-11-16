@@ -69,15 +69,15 @@ function checkActiveSection()
                 // if (wS > (hT+hH-wH)) {
                         // $(".navbar-nav li:first").addClass("active");
                 // } else 
-                if (fromTop >= 0 && fromTop <= 714) {
+                if (fromTop >= 0 || fromTop <= 630) {
                         $(".navbar-nav li.slider-active").addClass("active");
-                } else if (fromTop >= 946 && fromTop <= 2003) {
+                } else if (fromTop >= 946 || fromTop <= 1700) {
                         $(".navbar-nav li.how-sps-works-active").addClass("active");
-                } else if (fromTop >= 2499 && fromTop <= 3120) {
+                } else if (fromTop >= 2504 || fromTop <= 3000) {
                         $(".navbar-nav li.pricing-active").addClass("active");
-                } else if (fromTop >= 3134 && fromTop <= 3800) {
+                } else if (fromTop >= 3140 || fromTop <= 3500) {
                         $(".navbar-nav li.about-active").addClass("active");
-                } else if (fromTop >= 3814) {
+                } else if (fromTop >= 3808) {
                         $(".navbar-nav li.footer-active").addClass("active");
                 } else {
                         console.log("remove"); 
