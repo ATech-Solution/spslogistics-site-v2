@@ -714,14 +714,41 @@ p{color: #272727!important;opacity: 1!important;}
         padding-top: 300px;
     }
 
-}  
-@media only screen and (min-width: 767px) and (max-width: 768px) {
+/*}  */
+/*@media only screen and (min-width: 767px) and (max-width: 768px) {*/
+    .slider .slide--headline {
+        font-size: 35px;
+    }
+    .slider .slide--bio {
+        font-family: 'IBMPlexSans-Regular';
+        font-size: 16px;
+    }
+    #how-sps-works img.mainImg {
+        width: 100%;
+    }
+    .partner-list img {
+        max-width: 90%;
+        height: auto;
+    }
+
+
     #pricing .col-xs-12.col-sm-12.col-md-2{display: none!important;}
     #pricing .col-xs-12.col-sm-12.col-md-8 {
         width: 100%!important;
     }   
     #pricing .col-xs-12.col-sm-12.col-md-6.p-0{
         width: 50%!important;
+    }
+
+    #about .col-xs-12.col-sm-12.col-md-5.ml-60.mb-80{
+        margin: 0 auto!important;
+    }
+
+    .footer-widget .col-xs-12.col-sm-12.col-md-5{
+        width: 30%!important;
+    }
+    .contactSection {
+        min-height: auto;
     }
 }
 
