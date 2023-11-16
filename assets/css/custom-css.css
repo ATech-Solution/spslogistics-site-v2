@@ -141,8 +141,16 @@ p{color: #272727!important;opacity: 1!important;}
     line-height: 36px;
     text-align: center;
 }
-.top-notification strong{color: #272727!important;font-weight: bold;font-family: Lato-ExtraBold;}
-.top-notification a{padding-right: 5px;text-decoration: underline;}
+.top-notification strong{
+    color: #272727!important;
+    font-weight: bold;
+    font-family: Lato-ExtraBold;    
+}
+.top-notification a{
+    padding-right: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
 
 
 .header .navbar {
