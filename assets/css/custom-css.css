@@ -660,6 +660,21 @@ p{color: #272727!important;opacity: 1!important;}
         width: 396px!important;
     }
 
+    .slider .slide--headline{
+        font-size: 30px;
+    }
+    .slider .slide--bio {
+        font-size: 14px;       
+    }
+    .count-box .counting {
+        font-size: 14px;
+    }
+    .heading .heading--title,
+    #sign-up-today .heading--title,
+    #about .heading--title {
+        font-size: 30px;
+    }
+
 }
 
 /* Tablets */
@@ -757,6 +772,20 @@ p{color: #272727!important;opacity: 1!important;}
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .header-transparent + .slider {
         margin-top: -161px;
+    }
+    .slider .slide--headline{
+        font-size: 30px;
+    }
+    .slider .slide--bio {
+        font-size: 14px;       
+    }
+    .count-box .counting {
+        font-size: 14px;
+    }
+    .heading .heading--title,
+    #sign-up-today .heading--title,
+    #about .heading--title {
+        font-size: 30px;
     }
 }
 @media only screen and (max-width: 375px){
@@ -958,20 +987,20 @@ p{color: #272727!important;opacity: 1!important;}
         width: 100%!important;
     }
     .contactSection li:nth-child(4) {
-        padding-left: 0;
-        margin-left: 10px;
-        padding-top: 30px;
-        padding-bottom: 10px;
+        padding-left: 0!important;
+        margin-left: 10px!important;
+        padding-top: 30px!important;
+        padding-bottom: 10px!important;
     }
     .contactSection li:nth-child(4) .head {
         display: block;
-        padding-right: 10px;
-        margin-bottom: 10px;
+        padding-right: 10px!important;
+        margin-bottom: 10px!important;
     }
     .shareSMDesktop {display: none!important;}
     .shareSMMobile {display: block!important;}
     .contact-content .addInfo{
-        margin-left: 35px;
+        margin-left: 35px!important;
     }
 
     .toc .header,
