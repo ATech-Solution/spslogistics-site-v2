@@ -395,7 +395,8 @@
 					<!-- .row end -->
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12"><!-- mail_handler.php -->
-							<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">
+							<form action="#" method="post" class="wow fadeInUp" data-wow-duration="1s">
+							<!-- <form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">	 -->
 							<!-- <form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->	
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
@@ -586,7 +587,8 @@
 						</div>
 						<div class="form-request">
 							<div class="row"><!-- mail_handler_contact.php -->
-								<form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+								<form action="#" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+								<!-- <form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
 								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
@@ -744,7 +746,6 @@
 	s1.setAttribute('crossorigin','*');
 	s0.parentNode.insertBefore(s1,s0);
 	})();
-	$(".tawk-dropdown").css("display", "none!important");
 </script>
 <!--End of Tawk.to Script-->
 </body>
