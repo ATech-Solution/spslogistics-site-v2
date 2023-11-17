@@ -13,32 +13,33 @@ cant more than 1
 “International shipping companies” – answer: UPS, FedEx etc. We can use any carriers that you prefer. If clients have no preference, we use Chinese shipping companies to help you save logistics cost.
 “Others” – ask for name/email n then our team will get to them shortly.*/
 
-/*general*/
-
 /*custom*/
-/*https://www.fontsquirrel.com/tools/webfont-generator*/    
-    .hidden{display: none!important;}
-    /*strong{
-        font-weight: 600!important;
-        color: #898989!important;
-        font-family: sans-serif!important;
-    }
-    .feature--content h3{text-transform: none!important;}
-    .feature-panel .feature--content p{opacity: 1!important}
-    .feature--icon img{width: 55px;}
-    #pricing .feature--icon img{margin-top: -50px;}
-    .bg-overlay-dark:before{background-color: transparent; }
-    .feature-panel .feature--content p{
-          opacity: 1!important
-    }
 
-    @media screen and (min-width: 1024px) {
-      .toc .navbar-nav > li > a,
-      .pop .navbar-nav > li > a {
-            color: #fff!important;
-      }
-    }*/
+/*general*/
+.tawk-dropdown {
+    display: none!important;
+}
+.hidden{display: none!important;}
+/*strong{
+    font-weight: 600!important;
+    color: #898989!important;
+    font-family: sans-serif!important;
+}
+.feature--content h3{text-transform: none!important;}
+.feature-panel .feature--content p{opacity: 1!important}
+.feature--icon img{width: 55px;}
+#pricing .feature--icon img{margin-top: -50px;}
+.bg-overlay-dark:before{background-color: transparent; }
+.feature-panel .feature--content p{
+      opacity: 1!important
+}
 
+@media screen and (min-width: 1024px) {
+  .toc .navbar-nav > li > a,
+  .pop .navbar-nav > li > a {
+        color: #fff!important;
+  }
+}*/
 @font-face {
     font-family: 'IBMPlexSans-Light';
     src: url('fonts/IBMPlexSans-Light.woff') format('woff'),
