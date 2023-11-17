@@ -1,4 +1,12 @@
 <?php
+    $honeypot = FALSE;
+    if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+        $honeypot = TRUE;
+        log_spambot($_REQUEST);
+        # treat as spambot
+    } else {
+        # process as normal
+    
         //SMTP needs accurate times, and the PHP time zone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have   access to that
         date_default_timezone_set('Etc/UTC');
@@ -22,11 +30,11 @@
                 $mail->isSMTP(true);   //Send using SMTP
                 $mail->Host       = 'email-smtp.ap-southeast-1.amazonaws.com'; //hostname/domain yang dipergunakan untuk setting smtp
                 $mail->SMTPAuth   = true;  //Enable SMTP authentication
-                $mail->Username   = 'AKIAUQUCCF6GSJDVC3L5'; //SMTP username
-                $mail->Password   = 'BMFZlACWibjXSlH2MH2Xg80iZVSxNNvt3MqXeCF2d+sx';   //SMTP password
+                $mail->Username   = 'AKIAUQUCCF6GWV52QPOT'; //SMTP username
+                $mail->Password   = 'BBSNjOsafkK/nYDp0H0ce170B05rbYySzpSj7TP/ppkl';   //SMTP password
                 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
                 $mail->SMTPSecure = "tls";
-                $mail->Port       = 2587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 if(isset($_POST['formtype'])=="signup"){    
                     $to = "info@spslogistics.io"; // this is your Email address
@@ -97,4 +105,5 @@
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
+    }
 ?>

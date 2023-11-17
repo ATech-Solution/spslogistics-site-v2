@@ -395,15 +395,22 @@
 					<!-- .row end -->
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12"><!-- mail_handler.php -->
-							<form action="#" method="post" class="wow fadeInUp" data-wow-duration="1s">
-							<!-- <form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">	 -->
+							<!-- <form action="#" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->
+							<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">	
 							<!-- <form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->	
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
 								<!-- Email:  --><input class="mb-20" type="email" name="email" placeholder="Enter your email address here" required>
 								<!-- Message:<br><textarea rows="5" name="message" cols="30"></textarea> -->
 								<input type="hidden" name="formtype" value="signup">
-								<input class="button" type="submit" name="submit" value="Submit">
+								<div id="recaptcha" class="g-recaptcha"
+							          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
+							          data-callback="onSubmit"
+							          data-size="invisible">			
+							  	</div>
+							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+							  	<input id="submit" class="button" type="submit" name="submit" value="Submit">
+								<script>onload();</script>
 							</form>
 						</div>
 					</div>
@@ -587,8 +594,8 @@
 						</div>
 						<div class="form-request">
 							<div class="row"><!-- mail_handler_contact.php -->
-								<form action="#" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
-								<!-- <form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
+								<!-- <form action="#" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
+								<form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
 								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
@@ -602,7 +609,7 @@
 									<!-- .col-md-6 end -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Phone</label>
-										<input type="number" class="form-control" name="your-number" placeholder="Your Phone number">
+										<input type="number" class="form-control" name="your-number" placeholder="Your Phone number" maxlength="9">
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-5 ml-50">
 										<label class="form-label">Company</label>
@@ -637,10 +644,17 @@
 										<div class="requiredMsg">*Please fill in the required field</div>
 									</div>
 									<!-- .col-md-12 end -->
+									<div id="recaptcha" class="g-recaptcha"
+								          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
+								          data-callback="onSubmit"
+								          data-size="invisible">			
+								  	</div>
 									<div class="col-xs-12 col-sm-12 col-md-6">
+										<input type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
 										<input type="hidden" name="formtype" value="contact">
-										<input class="button" name="submit" type="submit" value="Submit">
+										<input  id="submit" class="button" name="submit" type="submit" value="Submit">
 									</div>
+									<script>onload();</script>
 									<!-- .col-md-6 end -->
 								</form>
 							</div>
@@ -748,5 +762,11 @@
 	})();
 </script>
 <!--End of Tawk.to Script-->
+
+<!-- site 6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD 
+secret 6LeeoBIpAAAAAGdlmKRcnN0_9fkuOI72co0bANXQ
+
+-->
+
 </body>
 </html>
