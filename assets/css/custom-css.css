@@ -17,6 +17,8 @@ cant more than 1
 
 /*general*/
 .hidden{display: none!important;}
+#checkFax {display:none!important;tabindex: -1!important;}
+
 /*strong{
     font-weight: 600!important;
     color: #898989!important;

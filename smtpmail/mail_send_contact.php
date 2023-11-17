@@ -6,7 +6,7 @@
         # treat as spambot
     } else {
         # process as normal
-        
+
         //SMTP needs accurate times, and the PHP time zone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have   access to that
         date_default_timezone_set('Etc/UTC');
@@ -37,6 +37,9 @@
                 $mail->SMTPSecure = "tls";
                 $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+                email
+                your-email
+                
                 if(isset($_POST['formtype'])=="contact"){
                     $to = "info@spslogistics.io"; // this is your Email address
                     $from = $_POST['your-email']; // this is the sender's Email address

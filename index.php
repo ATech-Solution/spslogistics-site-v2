@@ -400,7 +400,7 @@
 							<!-- <form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->	
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
-								<!-- Email:  --><input class="mb-20" type="email" name="email" placeholder="Enter your email address here" required>
+								<!-- Email:  --><input class="mb-20 inputClass" type="email" name="your-email" id="" placeholder="Enter your email address here" required>
 								<!-- Message:<br><textarea rows="5" name="message" cols="30"></textarea> -->
 								<input type="hidden" name="formtype" value="signup">
 								<div id="recaptcha" class="g-recaptcha"
@@ -408,7 +408,7 @@
 							          data-callback="onSubmit"
 							          data-size="invisible">			
 							  	</div>
-							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
 							  	<input id="submit" class="button" type="submit" name="submit" value="Submit">
 								<script>onload();</script>
 							</form>
@@ -599,21 +599,21 @@
 								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
-										<input type="text" class="form-control" name="your-name" placeholder="Your Name" required>
+										<input type="text" class="form-control inputClass" name="your-name" placeholder="Your Name" required>
 									</div>
 									<!-- .col-md-6 end -->
 									<div class="col-xs-12 col-sm-12 col-md-5 ml-50">
 										<label class="form-label">Email*</label>
-										<input type="email" class="form-control" name="your-email" placeholder="Your Email" required>
+										<input type="email" class="form-control inputClass" name="your-email" placeholder="Your Email" required>
 									</div>
 									<!-- .col-md-6 end -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Phone</label>
-										<input type="number" class="form-control" name="your-number" placeholder="Your Phone number" maxlength="9">
+										<input type="number" class="form-control inputClass" name="your-number" placeholder="Your Phone number" maxlength="9">
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-5 ml-50">
 										<label class="form-label">Company</label>
-										<input type="text" class="form-control" name="your-company" placeholder="Your Company name">
+										<input type="text" class="form-control" inputClass name="your-company" placeholder="Your Company name">
 									</div>
 									<!-- .col-md-6 end -->
 									<div class="col-xs-12 col-sm-12 col-md-12 checkboxCollumn">
@@ -640,7 +640,7 @@
 									<!-- .col-md-12 end -->
 									<div class="col-xs-12 col-sm-12 col-md-12">
 										<label class="form-label">Message</label>
-										<textarea class="form-control" name="your-message" rows="3" placeholder="Enter your message here"></textarea>
+										<textarea class="form-control inputClass" name="your-message" rows="3" placeholder="Enter your message here"></textarea>
 										<div class="requiredMsg">*Please fill in the required field</div>
 									</div>
 									<!-- .col-md-12 end -->
@@ -650,7 +650,7 @@
 								          data-size="invisible">			
 								  	</div>
 									<div class="col-xs-12 col-sm-12 col-md-6">
-										<input type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+										<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
 										<input type="hidden" name="formtype" value="contact">
 										<input  id="submit" class="button" name="submit" type="submit" value="Submit">
 									</div>

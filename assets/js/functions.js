@@ -96,12 +96,17 @@ function checkActiveSection()
 $(window).scroll(checkActiveSection) ;
 $(document).ready(checkActiveSection) ;
 
+// disable copy paste html
+window.onload = () => {
+ const myInput = document.getElementsByClassName("inputClass");
+ myInput.onpaste = e => e.preventDefault();
+}
 
+// google recaptcha
 function onSubmit(token) {
   // alert('thanks ' + document.getElementById('field').value);
   alert('grecaptcha')
 }
-
 function validate(event) {
   event.preventDefault();
   // if (!document.getElementById('field').value) {
@@ -110,7 +115,6 @@ function validate(event) {
     grecaptcha.execute();
   // }
 }
-
 function onload() {
   var element = document.getElementById('submit');
   element.onclick = validate;
