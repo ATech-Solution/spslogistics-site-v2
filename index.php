@@ -451,13 +451,13 @@
 								<!-- Last Name: <input type="text" name="last_name"> -->
 								<!-- Email:  --><input class="mb-20 inputClass" type="email" name="your-email" id="" placeholder="Enter your email address here" required>
 								<!-- Message:<br><textarea rows="5" name="message" cols="30"></textarea> -->
-								<input type="hidden" name="formtype" value="signup">
 								<!-- <div id="recaptcha" class="g-recaptcha"
 							          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
 							          data-callback="onSubmit"
 							          data-size="invisible">			
 							  	</div> -->
 							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
+							  	<input type="hidden" name="formtype" value="signup">
 							  	<input id="submit" class="button" type="submit" name="submit" value="Submit">
 								<!-- <script>onloads();</script> -->
 							</form>
