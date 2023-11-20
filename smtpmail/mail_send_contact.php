@@ -67,7 +67,7 @@ $mail = new PHPMailer(true);
 
                 // //Recipients
                 $mail->setFrom($to, $to);
-                $mail->addAddress($to, $to);    //email tujuan
+                $mail->addAddress($to, "info spslogistics");    //email tujuan
                 // $mail->addReplyTo('info@spslogistics.io', 'Information'); //email tujuan add reply (bila tidak dibutuhkan bisa 
                 $mail->isHTML(true);
                 $mail->Subject = $subject;
