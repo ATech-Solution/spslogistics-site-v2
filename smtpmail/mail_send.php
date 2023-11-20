@@ -1,10 +1,10 @@
 <?php
-    // $honeypot = FALSE;
-    // if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
-    //     $honeypot = TRUE;
-    //     log_spambot($_REQUEST);
-    //     # treat as spambot
-    // } else {
+    $honeypot = FALSE;
+    if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+        $honeypot = TRUE;
+        // log_spambot($_REQUEST);
+        # treat as spambot
+    } else {
         # process as normal
     
         //SMTP needs accurate times, and the PHP time zone MUST be set
@@ -72,13 +72,13 @@
                     $mail->AltBody = $message;
                     $mail->send();
 
-                    // $mail->setFrom($to, $to);
-                    // $mail->addAddress($from, $from);     //email tujuan
-                    // $mail->isHTML(true);   //Set email format to HTML
-                    // $mail->Subject = $subject2;
-                    // $mail->Body    = $message2;
-                    // $mail->AltBody = $message2;
-                    // $mail->send();
+                    $mail->setFrom($to, $to);
+                    $mail->addAddress($from, $from);     //email tujuan
+                    $mail->isHTML(true);   //Set email format to HTML
+                    $mail->Subject = $subject2;
+                    $mail->Body    = $message2;
+                    $mail->AltBody = $message2;
+                    $mail->send();
 
                     // //Recipients
                     // $mail->setFrom('info@spslogistics.io', 'Mailer');
@@ -105,5 +105,5 @@
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
-    // }
+    }
 ?>
