@@ -28,6 +28,49 @@
 	<link href="assets/css/style.css" rel="stylesheet">
 	<link href="assets/css/custom-css.css" rel="stylesheet">
 	
+	<script src="assets/js/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/functions.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+		// security     
+	// disable copy paste html
+	window.onload = () => {
+	  const myInput = document.getElementsByClassName("inputClass");
+	  myInput.onpaste = e => e.preventDefault();
+	}
+
+	// google recaptcha
+	function onSubmit(token) {
+	  // alert('thanks ' + document.getElementById('field').value);
+	  alert('grecaptcha')
+	}
+	function validate(event) {
+	  event.preventDefault();
+	  // if (!document.getElementById('field').value) {
+	  //   alert("You must add text to the required field");
+	  // } else {
+	    grecaptcha.execute();
+	  // }
+	}
+	function onloads() {
+	  var element = document.getElementById('submit');
+	  element.onclick = validate;
+	}
+	</script>
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/6549e70ba84dd54dc48944ae/1hekat293';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 	<!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
@@ -410,7 +453,7 @@
 							  	</div>
 							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
 							  	<input id="submit" class="button" type="submit" name="submit" value="Submit">
-								<script>onload();</script>
+								<script>onloads();</script>
 							</form>
 						</div>
 					</div>
@@ -654,7 +697,7 @@
 										<input type="hidden" name="formtype" value="contact">
 										<input  id="submit" class="button" name="submit" type="submit" value="Submit">
 									</div>
-									<script>onload();</script>
+									<script>onloads();</script>
 									<!-- .col-md-6 end -->
 								</form>
 							</div>
@@ -746,54 +789,6 @@
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="assets/js/jquery-2.2.4.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/functions.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-	// security     
-// disable copy paste html
-window.onload = () => {
-  const myInput = document.getElementsByClassName("inputClass");
-  myInput.onpaste = e => e.preventDefault();
-}
-
-// google recaptcha
-function onSubmit(token) {
-  // alert('thanks ' + document.getElementById('field').value);
-  alert('grecaptcha')
-}
-function validate(event) {
-  event.preventDefault();
-  // if (!document.getElementById('field').value) {
-  //   alert("You must add text to the required field");
-  // } else {
-    grecaptcha.execute();
-  // }
-}
-function onload() {
-  var element = document.getElementById('submit');
-  element.onclick = validate;
-}
-</script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-	(function(){
-	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-	s1.async=true;
-	s1.src='https://embed.tawk.to/6549e70ba84dd54dc48944ae/1hekat293';
-	s1.charset='UTF-8';
-	s1.setAttribute('crossorigin','*');
-	s0.parentNode.insertBefore(s1,s0);
-	})();
-</script>
-<!--End of Tawk.to Script-->
-
-<!-- site 6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD 
-secret 6LeeoBIpAAAAAGdlmKRcnN0_9fkuOI72co0bANXQ
-
--->
 
 </body>
 </html>
