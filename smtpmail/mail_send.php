@@ -1,6 +1,6 @@
 <?php
     $honeypot = FALSE;
-    if (!empty($_POST['contact_me_by_fax_only']) && (bool) $_POST['contact_me_by_fax_only'] == TRUE) {
+    if (!empty($_REQUEST['contact_me_by_fax_only']) && $_REQUEST['contact_me_by_fax_only'] == TRUE) {
         $honeypot = TRUE;
         // log_spambot($_POST);
         # treat as spambot
