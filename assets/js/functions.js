@@ -10,32 +10,6 @@
 	7.  WOW
 	8.  Youtube Background
 */
-// security     
-// disable copy paste html
-window.onload = () => {
- const myInput = document.getElementsByClassName("inputClass");
- myInput.onpaste = e => e.preventDefault();
-}
-
-// google recaptcha
-function onSubmit(token) {
-  // alert('thanks ' + document.getElementById('field').value);
-  alert('grecaptcha')
-}
-function validate(event) {
-  event.preventDefault();
-  // if (!document.getElementById('field').value) {
-  //   alert("You must add text to the required field");
-  // } else {
-    grecaptcha.execute();
-  // }
-}
-function onload() {
-  var element = document.getElementById('submit');
-  element.onclick = validate;
-}
-
-
 $(window).load(function() {
     // scroll from other page
     var cur_location = window.location.href;

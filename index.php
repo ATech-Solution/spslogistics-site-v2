@@ -749,7 +749,33 @@
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/functions.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	// security     
+// disable copy paste html
+window.onload = () => {
+  const myInput = document.getElementsByClassName("inputClass");
+  myInput.onpaste = e => e.preventDefault();
+}
+
+// google recaptcha
+function onSubmit(token) {
+  // alert('thanks ' + document.getElementById('field').value);
+  alert('grecaptcha')
+}
+function validate(event) {
+  event.preventDefault();
+  // if (!document.getElementById('field').value) {
+  //   alert("You must add text to the required field");
+  // } else {
+    grecaptcha.execute();
+  // }
+}
+function onload() {
+  var element = document.getElementById('submit');
+  element.onclick = validate;
+}
+</script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
