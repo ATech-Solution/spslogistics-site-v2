@@ -27,10 +27,6 @@
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">	 -->
 	<link href="assets/css/style.css" rel="stylesheet">
 	<link href="assets/css/custom-css.css" rel="stylesheet">
-	
-	<script src="assets/js/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/plugins.js"></script>
-	<script src="assets/js/functions.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script>
 		// security     
@@ -789,6 +785,9 @@
 
 <!-- Footer Scripts
 ============================================= -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
 
 </body>
 </html>
