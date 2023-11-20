@@ -71,13 +71,13 @@ $mail = new PHPMailer(true);
                 $mail->AltBody = $message;
                 $mail->send();
 
-                $mail->setFrom($to, $to);
-                $mail->addAddress($from, $from);     //email tujuan
-                $mail->isHTML(true);   //Set email format to HTML
-                $mail->Subject = $subject2;
-                $mail->Body    = $message2;
-                $mail->AltBody = $message2;
-                $mail->send();
+                // $mail->setFrom($to, $to);
+                // $mail->addAddress($from, $from);     //email tujuan
+                // $mail->isHTML(true);   //Set email format to HTML
+                // $mail->Subject = $subject2;
+                // $mail->Body    = $message2;
+                // $mail->AltBody = $message2;
+                // $mail->send();
 
                 // //Recipients
                 // $mail->setFrom('info@spslogistics.io', 'Mailer');

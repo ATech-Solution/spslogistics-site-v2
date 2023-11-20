@@ -75,13 +75,13 @@ $mail = new PHPMailer(true);
                 $mail->AltBody = $messages;
                 $mail->send();
 
-                $mail->setFrom($to, $to);
-                $mail->addAddress($from, $name);    //email tujuan
-                $mail->isHTML(true);   //Set email format to HTML
-                $mail->Subject = $subject2;
-                $mail->Body    = $message2;
-                $mail->AltBody = $message2;
-                $mail->send();
+                // $mail->setFrom($to, $to);
+                // $mail->addAddress($from, $name);    //email tujuan
+                // $mail->isHTML(true);   //Set email format to HTML
+                // $mail->Subject = $subject2;
+                // $mail->Body    = $message2;
+                // $mail->AltBody = $message2;
+                // $mail->send();
                 header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
             }
         }   
