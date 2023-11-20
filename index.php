@@ -36,32 +36,32 @@
 	  myInput.onpaste = e => e.preventDefault();
 	}
 
-	// google recaptcha
-	function onSubmit(token) {
-	  // alert('thanks ' + document.getElementById('field').value);
-	  // alert('grecaptcha')
-	  document.getElementById("signUpForm").submit();
-	}
-	// google recaptcha
-	function onSubmitContact(token) {
-	  document.getElementById("contactForm").submit();
-	}
-	function validate(event) {
-	  event.preventDefault();
-	  // if (!document.getElementById('field').value) {
-	  //   alert("You must add text to the required field");
-	  // } else {
-	    grecaptcha.execute();
-	  // }
-	}
-	function onloads() {
-	  var element = document.getElementById('submit');
-	  element.onclick = validate;
-	}
-	function onloadsContact() {
-	  var element = document.getElementById('submit');
-	  element.onclick = validate;
-	}
+	// // google recaptcha
+	// function onSubmit(token) {
+	//   // alert('thanks ' + document.getElementById('field').value);
+	//   // alert('grecaptcha')
+	//   document.getElementById("signUpForm").submit();
+	// }
+	// // google recaptcha
+	// function onSubmitContact(token) {
+	//   document.getElementById("contactForm").submit();
+	// }
+	// function validate(event) {
+	//   event.preventDefault();
+	//   // if (!document.getElementById('field').value) {
+	//   //   alert("You must add text to the required field");
+	//   // } else {
+	//     grecaptcha.execute();
+	//   // }
+	// }
+	// function onloads() {
+	//   var element = document.getElementById('submit');
+	//   element.onclick = validate;
+	// }
+	// function onloadsContact() {
+	//   var element = document.getElementById('submit');
+	//   element.onclick = validate;
+	// }
 	
 	</script>
 	<!--Start of Tawk.to Script-->
@@ -452,14 +452,14 @@
 								<!-- Email:  --><input class="mb-20 inputClass" type="email" name="your-email" id="" placeholder="Enter your email address here" required>
 								<!-- Message:<br><textarea rows="5" name="message" cols="30"></textarea> -->
 								<input type="hidden" name="formtype" value="signup">
-								<div id="recaptcha" class="g-recaptcha"
+								<!-- <div id="recaptcha" class="g-recaptcha"
 							          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
 							          data-callback="onSubmit"
 							          data-size="invisible">			
-							  	</div>
+							  	</div> -->
 							  	<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
 							  	<input id="submit" class="button" type="submit" name="submit" value="Submit">
-								<script>onloads();</script>
+								<!-- <script>onloads();</script> -->
 							</form>
 						</div>
 					</div>
@@ -693,17 +693,17 @@
 										<div class="requiredMsg">*Please fill in the required field</div>
 									</div>
 									<!-- .col-md-12 end -->
-									<div id="recaptcha" class="g-recaptcha"
+									<!-- <div id="recaptcha" class="g-recaptcha"
 								          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
 								          data-callback="onSubmitContact"
 								          data-size="invisible">			
-								  	</div>
+								  	</div> -->
 									<div class="col-xs-12 col-sm-12 col-md-6">
 										<input type="checkbox" name="contact_me_by_fax_only" value="1" id="checkFax" autocomplete="off">
 										<input type="hidden" name="formtype" value="contact">
 										<input  id="submit" class="button" name="submit" type="submit" value="Submit">
 									</div>
-									<script>onloadsContact();</script>
+									<!-- <script>onloadsContact();</script> -->
 									<!-- .col-md-6 end -->
 								</form>
 							</div>
