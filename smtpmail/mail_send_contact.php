@@ -1,10 +1,10 @@
 <?php
-    $honeypot = FALSE;
-    if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
-        $honeypot = TRUE;
-        log_spambot($_REQUEST);
-        # treat as spambot
-    } else {
+    // $honeypot = FALSE;
+    // if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+    //     $honeypot = TRUE;
+    //     log_spambot($_REQUEST);
+    //     # treat as spambot
+    // } else {
         # process as normal
 
         //SMTP needs accurate times, and the PHP time zone MUST be set
@@ -37,9 +37,6 @@
                 $mail->SMTPSecure = "tls";
                 $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                email
-                your-email
-                
                 if(isset($_POST['formtype'])=="contact"){
                     $to = "info@spslogistics.io"; // this is your Email address
                     $from = $_POST['your-email']; // this is the sender's Email address
@@ -93,5 +90,5 @@
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
-}            
+    // }            
 ?>

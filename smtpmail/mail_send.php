@@ -1,10 +1,10 @@
 <?php
-    $honeypot = FALSE;
-    if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
-        $honeypot = TRUE;
-        log_spambot($_REQUEST);
-        # treat as spambot
-    } else {
+    // $honeypot = FALSE;
+    // if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+    //     $honeypot = TRUE;
+    //     log_spambot($_REQUEST);
+    //     # treat as spambot
+    // } else {
         # process as normal
     
         //SMTP needs accurate times, and the PHP time zone MUST be set
@@ -105,5 +105,5 @@
                 header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
                 // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
-    }
+    // }
 ?>

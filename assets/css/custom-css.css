@@ -579,17 +579,23 @@ p{color: #272727!important;opacity: 1!important;}
         line-height: 20px;        
     }
     .contactSection .head {
+        font-family: 'Lato';
+        font-size: 14px;
         top: -5px;
         position: relative;
         color: #fff;        
         padding-right:5px;
     }
     .contactSection p {
-        font-family: 'Lato';
+        font-family: 'latolight';
+        font-size: 14px;
         color: #ffffffc7!important;
     }
-    .contact-content .addInfo,.contact-content .addInfo a {
+    .contact-content .addInfo,
+    .contact-content .addInfo a {
         color: #cccccc61;
+    }
+    .contact-content .addInfo a {
         text-decoration: underline;
     }
     .shareSMDesktop {display: inline-block!important;}
