@@ -749,6 +749,7 @@
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/functions.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

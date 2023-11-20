@@ -10,6 +10,31 @@
 	7.  WOW
 	8.  Youtube Background
 */
+// security     
+// disable copy paste html
+window.onload = () => {
+ const myInput = document.getElementsByClassName("inputClass");
+ myInput.onpaste = e => e.preventDefault();
+}
+
+// google recaptcha
+function onSubmit(token) {
+  // alert('thanks ' + document.getElementById('field').value);
+  alert('grecaptcha')
+}
+function validate(event) {
+  event.preventDefault();
+  // if (!document.getElementById('field').value) {
+  //   alert("You must add text to the required field");
+  // } else {
+    grecaptcha.execute();
+  // }
+}
+function onload() {
+  var element = document.getElementById('submit');
+  element.onclick = validate;
+}
+
 
 $(window).load(function() {
     // scroll from other page
@@ -26,7 +51,7 @@ function checkActiveSection()
 {
     if ($(window).width() > 700) {
         var fromTop = $(window).scrollTop();
-         console.log("fromTop "+fromTop);
+         // console.log("fromTop "+fromTop);
 
     //          var input = document.getElementById("header-container");
     //          // Execute a function when the user presses a key on the keyboard
@@ -98,31 +123,6 @@ $(document).ready(checkActiveSection) ;
 
 (function($) {
     "use strict";
-
-    // security     
-    // disable copy paste html
-    window.onload = () => {
-     const myInput = document.getElementsByClassName("inputClass");
-     myInput.onpaste = e => e.preventDefault();
-    }
-
-    // google recaptcha
-    function onSubmit(token) {
-      // alert('thanks ' + document.getElementById('field').value);
-      alert('grecaptcha')
-    }
-    function validate(event) {
-      event.preventDefault();
-      // if (!document.getElementById('field').value) {
-      //   alert("You must add text to the required field");
-      // } else {
-        grecaptcha.execute();
-      // }
-    }
-    function onload() {
-      var element = document.getElementById('submit');
-      element.onclick = validate;
-    }
 
     /* ------------------ HEADER AFFIX ------------------ */
     var $navAffix = $(".home .header-fixed .navbar-fixed-top");
