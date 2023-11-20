@@ -631,6 +631,9 @@ p{color: #272727!important;opacity: 1!important;}
     .container {
         width: 1366px;
     }
+    .contactSection{
+        padding-left: 100px!important;
+    }
 }
 /* Large Desktops */
 @media only screen and (min-width: 1366px) and (max-width: 1439px){
