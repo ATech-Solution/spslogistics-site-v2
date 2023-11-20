@@ -79,7 +79,6 @@ function checkActiveSection()
                 } else if (fromTop >= 3808) {
                         $(".navbar-nav li.footer-active").addClass("active");
                 } else {
-                        console.log("remove"); 
                         $(".navbar-nav li").removeClass("active");
                 }      
 

@@ -39,7 +39,12 @@
 	// google recaptcha
 	function onSubmit(token) {
 	  // alert('thanks ' + document.getElementById('field').value);
-	  alert('grecaptcha')
+	  // alert('grecaptcha')
+	  document.getElementById("signUpForm").submit();
+	}
+	// google recaptcha
+	function onSubmitContact(token) {
+	  document.getElementById("contactForm").submit();
 	}
 	function validate(event) {
 	  event.preventDefault();
@@ -53,6 +58,11 @@
 	  var element = document.getElementById('submit');
 	  element.onclick = validate;
 	}
+	function onloadsContact() {
+	  var element = document.getElementById('submit');
+	  element.onclick = validate;
+	}
+	
 	</script>
 	<!--Start of Tawk.to Script-->
 	<script type="text/javascript">
@@ -435,7 +445,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12"><!-- mail_handler.php -->
 							<!-- <form action="#" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->
-							<form action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">	
+							<form id="signUpForm" action="smtpmail/mail_send.php" method="post" class="wow fadeInUp" data-wow-duration="1s">	
 							<!-- <form action="mail_handler.php" method="post" class="wow fadeInUp" data-wow-duration="1s"> -->	
 								<!-- First Name: <input type="text" name="first_name"> -->
 								<!-- Last Name: <input type="text" name="last_name"> -->
@@ -634,7 +644,7 @@
 						<div class="form-request">
 							<div class="row"><!-- mail_handler_contact.php -->
 								<!-- <form action="#" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	 -->
-								<form action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
+								<form id="contactForm" action="smtpmail/mail_send_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s">	
 								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 									<div class="col-xs-12 col-sm-12 col-md-5 mr-30">
 										<label class="form-label">Name*</label>
@@ -685,7 +695,7 @@
 									<!-- .col-md-12 end -->
 									<div id="recaptcha" class="g-recaptcha"
 								          data-sitekey="6LeeoBIpAAAAAPIeXetei03AESYpk_xDSgqrIXYD"
-								          data-callback="onSubmit"
+								          data-callback="onSubmitContact"
 								          data-size="invisible">			
 								  	</div>
 									<div class="col-xs-12 col-sm-12 col-md-6">
@@ -693,7 +703,7 @@
 										<input type="hidden" name="formtype" value="contact">
 										<input  id="submit" class="button" name="submit" type="submit" value="Submit">
 									</div>
-									<script>onloads();</script>
+									<script>onloadsContact();</script>
 									<!-- .col-md-6 end -->
 								</form>
 							</div>
