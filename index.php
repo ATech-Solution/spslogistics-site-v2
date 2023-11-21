@@ -106,7 +106,7 @@
 	<?php if(isset($_GET['message'])){ ?>    
 	    	<div class="top-notification" style="background-color: #06fb21;"><?php echo $_GET['message'];?></div>
 	<?php } else { ?>
-		<div class="top-notification"><a data-scroll="scrollTo" href="#sign-up-today"><strong>Click here</strong></a> to SIGN UP TODAY to receive a <strong>free sourcing consultation</strong> & <strong>2 months free-storage</strong> with us!</div>
+		<div class="top-notification"><a data-scroll="scrollTo" href="#sign-up-today"><strong>Click here</strong></a>  to SIGN UP TODAY to receive a <strong>free sourcing consultation</strong> & <strong>2 months free-storage</strong> with us!</div>
 	<?php } ?>    
 
 	<header id="navbar-spy" class="header header-1 header-transparent header-fixed">
@@ -732,7 +732,7 @@
 									<div class="head">Business Inquiry</div>  
 									<p class="pb-0 mb-30">+852 2186 7961 <br>
 										<a href="https://wa.me/8617725603096" target="_blank">
-										+86 1772 560 3096 (WhatsApp)</a><br>
+										+86 177 2560 3096 (WhatsApp)</a><br>
 										<a href="mailto:info@spslogistics.io" target="_blank">info@spslogistics.io</a>
 									</p>
 								</li>
