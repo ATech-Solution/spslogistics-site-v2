@@ -9,3 +9,7 @@ assets/img/.DS_Store
 assets/js/.DS_Store
 assets/less/.DS_Store
 index.html
+smtpmail/.DS_Store
+smtpmail/librarysmtp/.DS_Store
+smtpmail/librarysmtp/phpmailer/.DS_Store
+smtpmail/librarysmtp/phpmailer/phpmailer/.DS_Store
