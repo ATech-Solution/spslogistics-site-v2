@@ -37,10 +37,11 @@ $mail = new PHPMailer(true);
                 # treat as spambot
             } else {
                 # process as normal
-                $to = "info@spslogistics.io"; // this is your Email address
-                $from = $_POST['your-email']; // this is the sender's Email address
+                //$to = "info@spslogistics.io"; // this is your Email address
+                $to = "tan@atech.software"; // this is your Email address
+                //$from = $_POST['email']; // this is the sender's Email address
                 $subject = "Form Shipping Rate Calculator Spslogistics.io";
-                $subject2 = "Your Form Shipping Rate Calculator Spslogistics.io";
+                //$subject2 = "Your Form Shipping Rate Calculator Spslogistics.io";
                 
                 $fromCountry ="";
                 $toCountry ="";
