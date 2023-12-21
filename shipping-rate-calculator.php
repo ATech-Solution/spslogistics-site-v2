@@ -234,7 +234,7 @@
 								<span><h3 class="title">Thank you for your request. We will reply within 24 hours</h3>
 								</span>	
 								</div>
-							<?php } else if (isset($_GET['notification'])=="error"){
+							<?php } elseif (isset($_GET['notification'])=="error"){ ?>
 								<div class="error">
 								<img src="assets/img/error-icon.png">
 								<span><h3 class="title">Message could not be sent</h3>
@@ -247,14 +247,12 @@
 								<!-- <form action="mail_handler_contact.php" method="post" class="wow fadeInUp mb-0" data-wow-duration="1s"> -->
 								<div class="col-xs-12 col-sm-12 col-md-12 form-section mt-20">
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0">
-										
 										<div class="info">
 										<img src="assets/img/error-icon.png">
 										<span><h3 class="title">Get an accurate quotation</h3>
 										<p>More information will result in a more accurate quotation. The final shipping fee is subject to change according to the final receiver full address and package details.</p>
 										</span>	
 										</div>
-
 									</div>  
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0 mt-20">
 										<label class="form-label" for="country">From</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>     
