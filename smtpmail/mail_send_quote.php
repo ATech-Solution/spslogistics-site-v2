@@ -71,11 +71,11 @@ $mail = new PHPMailer(true);
                 $messages = "
                 From : ". $fromCountry . "<br>
                 To : ". $toCountry . "<br>
-                To : ". $address . "<br>
-                Length : ". $length . "<br>
-                Width : ". $width . "<br>
-                Height : ". $height . "<br>
-                Weight : ". $weight . "<br><br><br>
+                Full Address : ". $address . "<br>
+                Length : ". $length . " cm<br>
+                Width : ". $width . " cm<br>
+                Height : ". $height . " cm<br>
+                Weight : ". $weight . " kg<br><br><br>
                 <strong>Product Information</strong><br>
                 Who product is it? : ". $whoProduct . "<br>
                 Number of Package : ". $numberPackage . "<br><br><br>

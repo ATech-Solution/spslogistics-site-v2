@@ -286,7 +286,7 @@
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0 mt-20">
 										<label class="form-label" for="country">From</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>     
 							            		<select id="from-country" name="from-country" class="form-control" style="cursor: not-allowed;pointer-events: none;">
-								            	<option selected value="Hong Kong">Hong Kong</option>
+								            	<option selected value="China">China</option>
 								            	</select>
 								            	<div class="line"></div>
 								        </div>      
