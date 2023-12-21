@@ -37,14 +37,15 @@ $mail = new PHPMailer(true);
                 # treat as spambot
             } else {
                 # process as normal
-                $to = "info@spslogistics.io"; // this is your Email address
-                //$to = "tan@atech.software"; // this is your Email address
+                //$to = "info@spslogistics.io"; // this is your Email address
+                $to = "tan@atech.software"; // this is your Email address
                 //$from = $_POST['email']; // this is the sender's Email address
                 $subject = "Form Shipping Rate Calculator Spslogistics.io";
                 //$subject2 = "Your Form Shipping Rate Calculator Spslogistics.io";
                 
                 $fromCountry ="";
                 $toCountry ="";
+                $address ="";
                 $length ="";
                 $width ="";
                 $height ="";
@@ -56,6 +57,7 @@ $mail = new PHPMailer(true);
                 $waNumber = "";
                 $fromCountry = $_POST['from-country'];
                 $toCountry = $_POST['to-country'];
+                $address = $_POST['address'];
                 $length = $_POST['length'];
                 $width = $_POST['width'];
                 $height = $_POST['height'];
@@ -66,7 +68,10 @@ $mail = new PHPMailer(true);
                 $email = $_POST['email'];
                 $waNumber = $_POST['wa-number'];
                 
-                $messages = "From : ". $fromCountry . "<br>To : ". $toCountry . "<br>
+                $messages = "
+                From : ". $fromCountry . "<br>
+                To : ". $toCountry . "<br>
+                To : ". $address . "<br>
                 Length : ". $length . "<br>
                 Width : ". $width . "<br>
                 Height : ". $height . "<br>

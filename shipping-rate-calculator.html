@@ -539,7 +539,11 @@
 									                <option value="Zambia">Zambia</option>
 									                <option value="Zimbabwe">Zimbabwe</option>
 						            	     		</select>
-								        </div>    	
+								        </div>  
+								        <div class="col-xs-12 col-sm-12 col-md-12 p-0">
+										<label class="form-label">Full Address</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>
+											<input type="text" class="form-control inputClass" name="address" placeholder="" required>
+									</div>  	
 								        <div class="col-xs-12 col-sm-12 col-md-4 pl-0 mob-p-0">
 										<label class="form-label">Length</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span> 
 										<label class="after" data-domain="cm">
