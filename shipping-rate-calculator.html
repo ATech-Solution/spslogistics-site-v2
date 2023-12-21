@@ -574,7 +574,7 @@
 									<h3 class="heading--title">Product Information</h2>
 									<div class="line"></div>	
 									<div class="col-xs-12 col-sm-12 col-md-6 pl-0 mob-p-0">
-										<label class="form-label">Who product is it?</label>
+										<label class="form-label">What product name is it?</label>
 										<input type="text" class="form-control inputClass" name="who-product" placeholder="" required>
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-6 pr-0 mob-p-0">
