@@ -66,7 +66,7 @@ $mail = new PHPMailer(true);
                 $email = $_POST['email'];
                 $waNumber = $_POST['wa-number'];
                 
-                $messages = "From : ". $fromCountry . "<br><br>To : ". $toCountry . "<br>
+                $messages = "From : ". $fromCountry . "<br>To : ". $toCountry . "<br>
                 Length : ". $length . "<br>
                 Width : ". $width . "<br>
                 Height : ". $height . "<br>
