@@ -118,7 +118,7 @@
 	.info p, .success p, .error p{font-family: 'IBMPlexSans-Regular';font-size:16px;color:#000;}
 
 	.form-control {color: #000;}
-	.form-control[disabled]{color: #999999;}
+	select#from-country{color: #999999;}
 	input[type="text"], input[type="email"], input[type="number"], select#to-country {
 	    width: 100%;
 	    background-color: #fff;
@@ -142,13 +142,11 @@
 	    padding-right: 10px;
 	    top: 57px;
 	}
-
 	label.after, input[type="text"] {
 	    position: relative;
 	    display: block;
 	    box-sizing: border-box;
 	}
-
 	label.after::after {
 	    content: attr(data-domain);
 	    position: absolute;
@@ -286,7 +284,7 @@
 									</div>  
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0 mt-20">
 										<label class="form-label" for="country">From</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>     
-							            		<select id="from-country" name="from-country" class="form-control" disabled>
+							            		<select id="from-country" name="from-country" class="form-control" style="cursor: not-allowed;pointer-events: none;">
 								            	<option selected value="Hong Kong">Hong Kong</option>
 								            	</select>
 								            	<div class="line"></div>
