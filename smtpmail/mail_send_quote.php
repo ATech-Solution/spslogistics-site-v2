@@ -29,7 +29,7 @@ $mail = new PHPMailer(true);
         $mail->SMTPSecure = "tls";
         $mail->Port       = 587;   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-        if(isset($_POST['formtype'])=="contact"){
+        if(isset($_POST['formtype'])=="quote"){
             $honeypot = FALSE;
             if (!empty($_REQUEST['contact_me_by_fax_only']) && $_REQUEST['contact_me_by_fax_only'] == TRUE) {
                 $honeypot = TRUE;
@@ -39,29 +39,46 @@ $mail = new PHPMailer(true);
                 # process as normal
                 $to = "info@spslogistics.io"; // this is your Email address
                 $from = $_POST['your-email']; // this is the sender's Email address
-                $subject = "Form Contact Spslogistics.io";
-                $subject2 = "Your Form Contact Spslogistics.io";
+                $subject = "Form Shipping Rate Calculator Spslogistics.io";
+                $subject2 = "Your Form Shipping Rate Calculator Spslogistics.io";
+                
+                $fromCountry ="";
+                $toCountry ="";
+                $length ="";
+                $width ="";
+                $height ="";
+                $weight ="";
+                $whoProduct ="";
+                $numberPackage ="";
                 $name ="";
                 $email ="";
-                $number ="";
-                $company ="";
-                $interest ="";
-                $message ="";
-                $interests = "";
-                $name = $_POST['your-name'];
-                $email = $_POST['your-email'];
-                $number = $_POST['your-number'];
-                $company = $_POST['your-company'];
-                $interest = $_POST['interested'];
-                if (isset($_POST['interested'])) {
-                    foreach ($interest as $interested){ 
-                        $interests .= $interested .",";
-                    }
-                }
-                $message = $_POST['your-message'];
+                $waNumber = "";
+                $fromCountry = $_POST['from-country'];
+                $toCountry = $_POST['to-country'];
+                $length = $_POST['length'];
+                $width = $_POST['width'];
+                $height = $_POST['height'];
+                $weight = $_POST['weight'];
+                $whoProduct = $_POST['who-product'];
+                $numberPackage = $_POST['number-package'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $waNumber = $_POST['wa-number'];
                 
-                $messages = "Name : ". $name . "<br><br>Email : ". $email . "<br><br>Phone Number : ". $number . "<br><br>Company : ". $company . "<br><br>Interest : ". $interests . "<br><br>Message : ". $message;
-                $message2 = "Thank you for your contact, we will contact you shortly.";
+                $messages = "From : ". $fromCountry . "<br><br>To : ". $toCountry . "<br>
+                Length : ". $length . "<br>
+                Width : ". $width . "<br>
+                Height : ". $height . "<br>
+                Weight : ". $weight . "<br><br><br>
+                <strong>Product Information</strong><br>
+                Who product is it? : ". $whoProduct . "<br>
+                Number of Package : ". $numberPackage . "<br><br><br>
+                <strong>Contact Information</strong><br>
+                Name : ". $name . "<br>
+                Email : ". $email . "<br>
+                Whatsapp Number : ". $waNumber;
+
+                $message2 = "Thank you for your submitted quote, we will contact you shortly.";
                 // $headers = "From:" . $from;
                 // $headers2 = "From:" . $to;
 
@@ -82,11 +99,11 @@ $mail = new PHPMailer(true);
                 // $mail->Body    = $message2;
                 // $mail->AltBody = $message2;
                 // $mail->send();
-                header('Location: ../../index.php?message=Submit Contact Success. Thank you ' . $name . ', we will contact you shortly.');
+                header('Location: ../../shipping-rate-calculator.php?notification=success');
             }
         }   
     } catch (Exception $e) {
-        header('Location: ../../index.php?message=Message could not be sent. Mailer Error: '. $mail->ErrorInfo .'. ');
+        header('Location: ../../shipping-rate-calculator.php?notification=error&message=Mailer Error: '. $mail->ErrorInfo .'. ');
         // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     } 
 ?>
