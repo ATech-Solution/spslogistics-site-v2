@@ -139,6 +139,7 @@
 				<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
 					<ul class="nav navbar-nav nav-pos-right navbar-right nav-split">
 						<li class="active slider-active"><a data-scroll="scrollTo" href="#slider">Home</a></li>
+						<li><a data-scroll="scrollTo" href="shipping-rate-calculator.php">Shipping Rate Calculator</a></li>
 						<li class="how-sps-works-active"><a data-scroll="scrollTo" href="#how-sps-works">How SPS works</a></li>
 						<li class="pricing-active"><a data-scroll="scrollTo" href="#pricing">Pricing</a></li>
 						<li class="about-active"><a data-scroll="scrollTo" href="#about">About us</a>

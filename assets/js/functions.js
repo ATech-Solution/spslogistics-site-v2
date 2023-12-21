@@ -13,7 +13,7 @@
 $(window).load(function() {
     // scroll from other page
     var cur_location = window.location.href;
-        if(cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
+        if(cur_location.includes("shipping-rate-calculator") || cur_location.includes("terms-and-conditions") || cur_location.includes("privacy-policy")){
         var idhash = decodeURI(location.hash.split('#')[1]);
         $(".navbar-nav > li.active").removeClass('active');
         $(".navbar-nav > li."+idhash+"-active").addClass('active');
@@ -23,66 +23,73 @@ $(window).load(function() {
 
 function checkActiveSection()
 {
-    if ($(window).width() > 700) {
-        var fromTop = $(window).scrollTop();
-         // console.log("fromTop "+fromTop);
+    var cur_location = window.location.href;
+    if(cur_location.includes("shipping-rate-calculator")){
+        console.log("scroll active menu diactivated");     
+    }
+    else
+    {
+        if ($(window).width() > 700) {
+            var fromTop = $(window).scrollTop();
+             // console.log("fromTop "+fromTop);
 
-    //          var input = document.getElementById("header-container");
-    //          // Execute a function when the user presses a key on the keyboard
-    //          input.addEventListener("keypress", function(event) {
-    //              // If the user presses the "Enter" key on the keyboard
-    //              if (event.key === "Enter") {
-    //                  // Cancel the default action, if needed
-    //                  event.preventDefault();
-    //                  // Trigger the button element with a click
-    //                  alert(fromTop);
-    //              // document.getElementById("myBtn").click();
-    //              }
-    //          });
-            //locate us scroll highlight home
-            // var hT = $('.section').offset().top,
-            // var hH = $('.section').outerHeight(),
-            // var wH = $(window).height(),
-            // var wS = $(this).scrollTop();
+        //          var input = document.getElementById("header-container");
+        //          // Execute a function when the user presses a key on the keyboard
+        //          input.addEventListener("keypress", function(event) {
+        //              // If the user presses the "Enter" key on the keyboard
+        //              if (event.key === "Enter") {
+        //                  // Cancel the default action, if needed
+        //                  event.preventDefault();
+        //                  // Trigger the button element with a click
+        //                  alert(fromTop);
+        //              // document.getElementById("myBtn").click();
+        //              }
+        //          });
+                //locate us scroll highlight home
+                // var hT = $('.section').offset().top,
+                // var hH = $('.section').outerHeight(),
+                // var wH = $(window).height(),
+                // var wS = $(this).scrollTop();
 
-            // var hT = jQuery('#locate-us').offset().top,
-            //             hH = jQuery('#locate-us').outerHeight(),
-            //             wH = jQuery(window).height(),
-            //             wS = jQuery(this).scrollTop();
-            // //the team scroll highlight home
-            // var hT1 = jQuery('#the-team').offset().top,
-            //             hH1 = jQuery('#the-team').outerHeight(),
-            //             wH1 = jQuery(window).height(),
-            //             wS1 = jQuery(this).scrollTop();
-            
-    //          console.log('scroll coordinate');
-             // console.log("scroll coordinate "+hT+" "+wH+" "+wS);
-    //          if (wS > (hT+hH-wH)){
-    // //           alert('you have scrolled to the locate-us');
-    //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
-    //          }
-            
-        // $('.section').each(function(){
-          // var sectionOffset = $(this).offset();  
-                // console.log("sectionOffset "+sectionOffset);       
-                // if (wS > (hT+hH-wH)) {
-                        // $(".navbar-nav li:first").addClass("active");
-                // } else 
-                if (fromTop >= 0 && fromTop <= 630) {
-                        $(".navbar-nav li.slider-active").addClass("active");
-                } else if (fromTop >= 946 && fromTop <= 1700) {
-                        $(".navbar-nav li.how-sps-works-active").addClass("active");
-                } else if (fromTop >= 2504 && fromTop <= 3000) {
-                        $(".navbar-nav li.pricing-active").addClass("active");
-                } else if (fromTop >= 3140 && fromTop <= 3500) {
-                        $(".navbar-nav li.about-active").addClass("active");
-                } else if (fromTop >= 3808) {
-                        $(".navbar-nav li.footer-active").addClass("active");
-                } else {
-                        $(".navbar-nav li").removeClass("active");
-                }      
+                // var hT = jQuery('#locate-us').offset().top,
+                //             hH = jQuery('#locate-us').outerHeight(),
+                //             wH = jQuery(window).height(),
+                //             wS = jQuery(this).scrollTop();
+                // //the team scroll highlight home
+                // var hT1 = jQuery('#the-team').offset().top,
+                //             hH1 = jQuery('#the-team').outerHeight(),
+                //             wH1 = jQuery(window).height(),
+                //             wS1 = jQuery(this).scrollTop();
+                
+        //          console.log('scroll coordinate');
+                 // console.log("scroll coordinate "+hT+" "+wH+" "+wS);
+        //          if (wS > (hT+hH-wH)){
+        // //           alert('you have scrolled to the locate-us');
+        //              jQuery("#nav-wrapper li:first-child a").addClass("elementor-item-active");
+        //          }
+                
+            // $('.section').each(function(){
+              // var sectionOffset = $(this).offset();  
+                    // console.log("sectionOffset "+sectionOffset);       
+                    // if (wS > (hT+hH-wH)) {
+                            // $(".navbar-nav li:first").addClass("active");
+                    // } else 
+                    if (fromTop >= 0 && fromTop <= 630) {
+                            $(".navbar-nav li.slider-active").addClass("active");
+                    } else if (fromTop >= 946 && fromTop <= 1700) {
+                            $(".navbar-nav li.how-sps-works-active").addClass("active");
+                    } else if (fromTop >= 2504 && fromTop <= 3000) {
+                            $(".navbar-nav li.pricing-active").addClass("active");
+                    } else if (fromTop >= 3140 && fromTop <= 3500) {
+                            $(".navbar-nav li.about-active").addClass("active");
+                    } else if (fromTop >= 3808) {
+                            $(".navbar-nav li.footer-active").addClass("active");
+                    } else {
+                            $(".navbar-nav li").removeClass("active");
+                    }      
 
-        // });
+            // });
+        }
     }
 }
 
