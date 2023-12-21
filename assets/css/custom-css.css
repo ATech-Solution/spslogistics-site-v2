@@ -613,8 +613,11 @@ p{color: #272727!important;opacity: 1!important;}
         height: 65px;
         line-height: 0px;
         background-color: #000000ad;
+        /*position: fixed; < sticky
+        bottom: 0px;
+        left: 0px;
+        right: 0px;*/
     }
-
     .toc .blog-single .blog-entry .entry--content,
     .pop .blog-single .blog-entry .entry--content {
         padding-bottom: 0px!important;

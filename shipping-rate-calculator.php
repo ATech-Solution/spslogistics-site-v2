@@ -98,7 +98,7 @@
 	</script>
 
 	<style>
-	.quotation{background:#D9DBDE;}	
+	.quotation{background:#D9DBDE;min-height: 623px;}	
 	label.form-label{color:#000!important;}
 	.entry--content .form-section{border-radius:15px;background:#fff;padding:20px;margin:0px 5px 50px 5px;}
 	.line{border-bottom: 1px #dddddd solid;width:100%;margin-bottom:25px;}
