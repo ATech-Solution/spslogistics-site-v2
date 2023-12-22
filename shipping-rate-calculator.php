@@ -180,13 +180,20 @@
 	@media only screen and (min-width: 1200px){
 	    .quotation .container{width: 1080px;}
 	}
-	@media only screen and (max-width: 768px){
+	@media only screen and (min-width: 480px) and (max-width: 991px) {
 		.info span, .success span, .error span {
 		    padding: 20px 0px;
 		    display: inline-block;
 		    width: 85%;
 		}
-	}	
+		.mob-row{
+		    padding: 0px!important;			
+		}
+		.mob-p-0 {
+		    padding: 0px!important;
+		}
+		h3{font-size:24px!important;}
+	}
 	@media only screen and (min-width: 320px) and (max-width: 479px){
 		.info span, .success span, .error span {
 		    padding: 20px 0px!important;
@@ -579,7 +586,7 @@
 										<input type="text" class="form-control inputClass" name="who-product" placeholder="" required>
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-6 pr-0 mob-p-0">
-										<label class="form-label">Number of Package</label>
+										<label class="form-label">Number of Packages</label>
 										<input type="text" class="form-control inputClass" name="number-package" placeholder="">
 									</div>
 								</div>
