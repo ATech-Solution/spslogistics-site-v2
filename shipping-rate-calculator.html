@@ -187,19 +187,19 @@
 		    width: 85%;
 		}
 	}	
-	@media only screen and (max-width: 425px){
+	@media only screen and (min-width: 320px) and (max-width: 479px){
 		.info span, .success span, .error span {
-		    padding: 20px 0px;
-		    display: inline-block;
-		    width: 75%;
+		    padding: 20px 0px!important;
+		    display: inline-block!important;
+		    width: 72%!important;
 		}
 		.mob-row{
 		    padding: 0px!important;			
 		}
 		.mob-p-0 {
-		    padding: 0px;
+		    padding: 0px!important;
 		}
-		h3{font-size:24px;}
+		h3{font-size:24px!important;}
 	}	
 	</style>
 </head>
@@ -278,21 +278,22 @@
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0">
 										<div class="info">
 										<img src="assets/img/error-icon.png">
-										<span><h3 class="title">Get an accurate quotation</h3>
+										<span><h3 class="title">Get an accurate quotation (Promise reply within 24 hours)</h3>
 										<p>More information will result in a more accurate quotation. The final shipping fee is subject to change according to the final receiver full address and package details.</p>
 										</span>	
 										</div>
 									</div>  
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0 mt-20">
 										<label class="form-label" for="country">From</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>     
-							            		<select id="from-country" name="from-country" class="form-control" style="cursor: not-allowed;pointer-events: none;">
+							            		<select id="from-country" name="from-country" class="form-control" style="cursor: not-allowed;pointer-events: none;" required>
 								            	<option selected value="China">China</option>
 								            	</select>
 								            	<div class="line"></div>
 								        </div>      
 								        <div class="col-xs-12 col-sm-12 col-md-12 p-0">    	
 										<label class="form-label" for="country">To</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>     
-								             	<select id="to-country" name="to-country" class="form-control">
+								             	<select id="to-country" name="to-country" class="form-control" required>
+									                <option value="" selected disabled hiddens>Select An Option</option>
 									                <option value="Australia">Australia</option>
 									                <option value="Afghanistan">Afghanistan</option>
 									                <option value="Åland Islands">Åland Islands</option>
@@ -574,12 +575,12 @@
 									<h3 class="heading--title">Product Information</h2>
 									<div class="line"></div>	
 									<div class="col-xs-12 col-sm-12 col-md-6 pl-0 mob-p-0">
-										<label class="form-label">What product name is it?</label>
+										<label class="form-label">What product is it?</label><span style="color: red !important; display: inline; float: none;padding-left:5px;">*</span>
 										<input type="text" class="form-control inputClass" name="who-product" placeholder="" required>
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-6 pr-0 mob-p-0">
 										<label class="form-label">Number of Package</label>
-										<input type="text" class="form-control inputClass" name="number-package" placeholder="" required>
+										<input type="text" class="form-control inputClass" name="number-package" placeholder="">
 									</div>
 								</div>
 
@@ -597,7 +598,7 @@
 									</div>
 									<!-- .col-md-6 end -->
 									<div class="col-xs-12 col-sm-12 col-md-12 p-0">
-										<label class="form-label">Whatsapp Number</label>
+										<label class="form-label">WhatsApp Number</label>
 										<input type="number" class="form-control inputClass" name="wa-number" placeholder="" maxlength="9">
 									</div>
 								</div>		
