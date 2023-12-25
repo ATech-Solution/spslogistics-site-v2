@@ -39,13 +39,14 @@
 	<title>SPS | Terms and Condition</title>
 
 	<!-- Google tag (gtag.js) -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11209400994"></script> -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11433204288"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'AW-11209400994');
+	gtag('config', 'AW-11433204288');
+	</script>
 
 
     var $navAffixtoc = $(".toc .header-fixed .navbar-fixed-top");
