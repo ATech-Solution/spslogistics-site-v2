@@ -761,9 +761,9 @@
 										<a href="https://www.facebook.com/SPS.Logistics.hongkong">
 										<img src="assets/img/icon-s2.png" alt="icon social media 2">
 										</a>
-										<a href="https://www.tiktok.com/@spslogistics">
+										<!-- <a href="https://www.tiktok.com/@spslogistics">
 										<img src="assets/img/icon-s3.png" alt="icon social media 3">
-										</a>
+										</a> -->
 									</div>
 									<div class="shareSMMobile mobileView">
 										<a href="https://instagram.com/spslogistics.io?igshid=YmMyMTA2M2Y=">
